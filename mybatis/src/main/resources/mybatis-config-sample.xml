@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+    <properties resource="xxx/xxx.properties" url="http://xxxx"><!-- 属性 -->
+        <property name="jdbc.driver" value="db.properties"/>
+    </properties>
+    <settings><!-- 设置-->
+        <setting name="cacheEnabled" value="false"/>
+        <setting name="lazyLoadingEnabled" value="false"/>
+        <setting name="aggressiveLazyLoading" value="false"/>
+        <setting name="multipleResultSetsEnabled" value="false"/>
+        <setting name="useColumnLabel" value="false"/>
+        <setting name="useGeneratedKeys" value="false"/>
+        <setting name="autoMappingBehavior" value="NONE"/>
+        <setting name="defaultExecutorType" value="SIMPLE"/>
+        <setting name="defaultStatementTimeout" value="100"/>
+        <setting name="safeRowBoundsEnabled" value="false"/>
+        <setting name="mapUnderscoreToCamelCase" value="false"/>
+        <setting name="localCacheScope" value="SESSION"/>
+        <setting name="jdbcTypeForNull" value="VARCHAR"/>
+        <setting name="lazyLoadTriggerMethods" value="equals"/>
+        <setting name="defaultScriptingLanguage" value="org.apache.ibatis.scripting.xmltags.XMLDynamicLanguageDriver"/>
+        <setting name="callSettersOnNulls" value="false"/>
+        <setting name="logPrefix" value="LONELY_WOLF_"/>
+        <setting name="logImpl" value="SLF4J"/>
+        <setting name="proxyFactory" value="JAVASSIST"/>
+    </settings>
+    <typeAliases>
+        <typeAlias alias="UserMapper" type="com.lonelyWolf.mybatis.mapper.UserMapper"/>
+        <package name="com.lonelyWolf.mybatis.mapper"/><!-- 配置包名-->
+    </typeAliases><!-- 配置别名 -->
+    <typeHandlers>
+        <typeHandler handler="xxx.xxx.xxx"></typeHandler>
+        <package name="xxx.xxx"/>
+    </typeHandlers><!-- 类型处理器 -->
+    <objectFactory type=""></objectFactory><!-- 对象工厂 -->
+    <plugins>
+        <plugin interceptor=""></plugin>
+    </plugins><!-- 插件 -->
+    <environments default="">
+        <environment id="">
+            <transactionManager type="JDBC"></transactionManager><!-- 事务管理器 -->
+            <dataSource type=""></dataSource><!-- 数据源 -->
+        </environment>
+    </environments>
+    <databaseIdProvider type=""></databaseIdProvider><!-- 数据库厂商标识 -->
+    <mappers>
+        <mapper resource="xxx/xxx.xml"/>
+    </mappers><!-- 映射器 -->
+
+</configuration>

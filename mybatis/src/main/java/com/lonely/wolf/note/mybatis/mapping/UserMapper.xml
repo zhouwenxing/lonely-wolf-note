@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lonely.wolf.note.note.mybatis.mapper.UserMapper">
+<!--    <cache/>-->
+<!--    <cache readOnly="true"></cache>-->
+<!--    <cache type="org.mybatis.caches.redis.RedisCache"></cache>-->
+<!--    <cache-ref namespace="com.lonelyWolf.mybatis.mapper.UserAddressMapper"/>-->
+
+    <resultMap id="MyUserResultMap" type="lwUser">
+        <result column="user_id" property="userId" jdbcType="VARCHAR" typeHandler="com.lonely.wolf.note.note.mybatis.typeHandler.MyTypeHandler" />
+        <result column="user_name" property="userName" jdbcType="VARCHAR" />
+    </resultMap>
+
+
+    <resultMap id="JobResultMap" type="lwUser">
+        <result column="user_id" property="userId" jdbcType="VARCHAR" />
+        <result column="user_name" property="userName" jdbcType="VARCHAR" />
+        <!--这里的JavaType也可以定义别名 property对应LwUser类中的属性名 -->
+<!--        <association property="userJobInfo" javaType="LwUserJob">-->
+        <collection property="userJobList" ofType="com.lonely.wolf.note.note.mybatis.model.LwUserJob">
+            <result column="id" property="id" jdbcType="VARCHAR" />
+            <result column="company_Name" property="companyName" jdbcType="VARCHAR" />
+            <result column="position" property="position" jdbcType="VARCHAR" />
+        </collection>
+    </resultMap>
+
+
+
+    <resultMap id="JobResultMap2" type="lwUser">
+        <result column="user_id" property="userId" jdbcType="VARCHAR" />
+        <result column="user_name" property="userName" jdbcType="VARCHAR" />
+
+        <collection property="userJobList" ofType="com.lonely.wolf.note.note.mybatis.model.LwUserJob" column="user_id" select="selectJob">
+        </collection>
+    </resultMap>
+
+    <select id="listAllUser" resultType="lwUser">
+        select user_id,user_name from lw_user
+    </select>
+
+    <select id="listUserByUserName" parameterType="String" resultMap="JobResultMap">
+        select user_id,user_name from lw_user where user_name=#{userName,jdbcType=VARCHAR,typeHandler=com.lonelyWolf.mybatis.typeHandler.MyTypeHandler}
+    </select>
+
+    <select id="listUserByTable" resultType="lwUser">
+        select user_id,user_name from ${tableName}
+    </select>
+
+    <select id="list" parameterType="com.lonely.wolf.note.note.mybatis.model.LwUser" resultType="lwUser">
+        select user_id,user_name from lw_user
+        <where>
+            <choose>
+                <when test="userId !=null and userId !=''">
+                    and user_id=#{userId}
+                </when>
+                <when test="userId='1'">
+                    and user_id=#{userId}
+                </when>
+                <otherwise>
+                    and user_id=#{userId}
+                </otherwise>
+            </choose>
+<!--            <if test="userId !=null and userId !=''">-->
+<!--                and user_id=#{userId}-->
+<!--            </if>-->
+<!--            <if test="userName !=null and userName !=''">-->
+<!--                and user_name=#{userName}-->
+<!--            </if>-->
+        </where>
+    </select>
+
+    <select id="listUserAndJob" resultMap="JobResultMap">
+        select * from lw_user u inner join lw_user_job j on u.user_id=j.user_id
+    </select>
+
+    <select id="selectUserAndJob" resultMap="JobResultMap2" useCache="true">
+        select * from lw_user
+    </select>
+
+    <select id="selectJob" resultType="com.lonely.wolf.note.note.mybatis.model.LwUserJob">
+        select * from lw_user_job where user_id=#{userId}
+    </select>
+
+</mapper>

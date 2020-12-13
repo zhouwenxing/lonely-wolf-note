@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lonely.wolf.note.note.mybatis.mapper.UserAddressMapper">
+
+   <insert id="insert" parameterType="com.lonely.wolf.note.note.mybatis.model.UserAddress" useGeneratedKeys="true" keyProperty="address">
+       insert into lw_user_address (address) values (#{address})
+   </insert>
+
+    <insert id="insert10" parameterType="com.lonely.wolf.note.note.mybatis.model.UserAddress" useGeneratedKeys="true" keyProperty="address">
+        insert into lw_user_address (id,address) values (#{id},#{address})
+    </insert>
+
+    <insert id="insert2"  useGeneratedKeys="true" keyProperty="address" >
+    <selectKey keyProperty="address" resultType="String" order="AFTER">
+        select uuid() from lw_user_address
+    </selectKey>
+        insert into lw_user_address (address) values (#{address})
+    </insert>
+
+<!--    <select id="selectUserAddress" resultType="UserAddress">-->
+<!--        select -->
+<!--        <include refid="myCloumn">-->
+<!--            <property name="prefix" value="ud"/>-->
+<!--        </include> -->
+<!--         from lw_user_address ud-->
+<!--    </select>-->
+
+<!--    <sql id="myCloumn" >-->
+<!--        ${prefix}.id,${prefix}.address-->
+<!--    </sql>-->
+
+
+    <select id="listAllUser" resultType="com.lonely.wolf.note.note.mybatis.model.UserAddress">
+    select
+    <include refid="myCloumn1">
+        <property name="prefix1" value="u"/>
+        <property name="prefix2" value="j"/>
+    </include>
+    from lw_user u inner join  lw_user_job j on u.user_id=j.user_id
+</select>
+
+    <sql id="myCloumn1" >
+        ${prefix1}.user_id,${prefix2}.id
+    </sql>
+
+
+    <insert id="batchInsert">
+        insert into lw_user_address (address) values
+       <foreach collection="list" item="item" separator=",">
+           (#{list.address})
+       </foreach>
+    </insert>
+
+    <select id="test">
+        select * from xxx where id in
+      <foreach collection="list" item="item" open="(" close=")" separator=",">
+          #{item.xxx}
+      </foreach>
+    </select>
+
+
+
+    
+
+
+
+</mapper>
