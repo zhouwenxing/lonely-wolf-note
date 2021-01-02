@@ -1,4 +1,4 @@
-package com.lonely.wolf.note.mq.rabbit.javaapi;
+package com.lonely.wolf.note.mq.rabbit.javaapi.returnListener;
 
 import com.rabbitmq.client.*;
 
@@ -7,11 +7,11 @@ import java.io.IOException;
 /**
  * @author zwx
  * @version 1.0
- * @date 2020/12/5
+ * @date 2021/1/2
  * @since jdk1.8
  */
-public class TestRabbitConsumer {
-    private static String QUEUE_NAME = "TEST_QUEUE";
+public class ReturnListenerConsumer {
+    private static String QUEUE_NAME = "LINTENER_QUEUE";//队列
     public static void main(String[] args) throws Exception{
         //1.声明连接
         ConnectionFactory factory = new ConnectionFactory();
@@ -33,8 +33,7 @@ public class TestRabbitConsumer {
             @Override
             public void handleDelivery(String consumerTag, Envelope envelope, AMQP.BasicProperties properties,
                                        byte[] body) throws IOException {
-                System.out.println("收到消息: " + new String(body, "UTF-8") + "，当前消息ID为：" + properties.getMessageId());
-                System.out.println("收到自定义属性："+ properties.getHeaders().get("name"));
+                System.out.println("收到消息: " + new String(body, "UTF-8"));
             }
         };
 
