@@ -1,7 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d6967a07-94a3-47d3-9196-84d574d9ce89" name="Default Changelist" comment="" />
+    <list default="true" id="d0ebfbcf-0ff6-4df7-a731-028e84ece2e7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../message-queue/src/main/java/com/lonely/wolf/note/mq/rabbit/springboot/controller/DelayQueueController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../message-queue/src/main/java/com/lonely/wolf/note/mq/rabbit/springboot/delayQueue/comsumer/PluginDelayConsumer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../message-queue/src/main/java/com/lonely/wolf/note/mq/rabbit/springboot/delayQueue/comsumer/TtlDelayConsumer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../message-queue/src/main/java/com/lonely/wolf/note/mq/rabbit/springboot/delayQueue/config/PluginDelayRabbitConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../message-queue/src/main/java/com/lonely/wolf/note/mq/rabbit/springboot/delayQueue/config/TtlDelayRabbitConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mini/spring/v2/beans/WolfBeanWrapped.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mini/spring/v2/beans/config/WolfBeanDefinition.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mini/spring/v2/beans/support/WolfBeanDefinitionReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mini/spring/v2/beans/support/WolfDefaultListableBeanFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mini/spring/v2/context/WolfAbstractApplicationContext.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mini/spring/v2/context/WolfApplicationContext.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mini/spring/v2/core/WolfBeanFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mini/spring/v2/core/WolfFactoryBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mini/spring/v2/webmvc/WolfDispatcherServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mini/spring/v2/webmvc/WolfHandlerMapping.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../message-queue/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../message-queue/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../message-queue/message-queue.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../message-queue/src/main/java/com/lonely/wolf/note/mq/rabbit/springboot/config/RabbitConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../message-queue/src/main/java/com/lonely/wolf/note/mq/rabbit/springboot/config/RabbitConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../message-queue/src/main/java/com/lonely/wolf/note/mq/rabbit/springboot/consumer/ExchangeConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../message-queue/src/main/java/com/lonely/wolf/note/mq/rabbit/springboot/consumer/ExchangeConsumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../message-queue/src/main/java/com/lonely/wolf/note/mq/rabbit/springboot/consumer/SimpleConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../message-queue/src/main/java/com/lonely/wolf/note/mq/rabbit/springboot/consumer/SimpleConsumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../message-queue/src/main/java/com/lonely/wolf/note/mq/rabbit/springboot/controller/HelloRabbitController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../message-queue/src/main/java/com/lonely/wolf/note/mq/rabbit/springboot/controller/HelloRabbitController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../message-queue/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../message-queue/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../message-queue/target/classes/com/lonely/wolf/note/mq/MqBootApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/../message-queue/target/classes/com/lonely/wolf/note/mq/MqBootApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../message-queue/target/classes/com/lonely/wolf/note/mq/rabbit/javaapi/TestRabbitConsumer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../message-queue/target/classes/com/lonely/wolf/note/mq/rabbit/javaapi/TestRabbitConsumer$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../message-queue/target/classes/com/lonely/wolf/note/mq/rabbit/javaapi/TestRabbitConsumer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../message-queue/target/classes/com/lonely/wolf/note/mq/rabbit/javaapi/TestRabbitConsumer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../message-queue/target/classes/com/lonely/wolf/note/mq/rabbit/javaapi/TestRabbitProducter.class" beforeDir="false" afterPath="$PROJECT_DIR$/../message-queue/target/classes/com/lonely/wolf/note/mq/rabbit/javaapi/TestRabbitProducter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../message-queue/target/classes/com/lonely/wolf/note/mq/rabbit/springboot/config/RabbitConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/../message-queue/target/classes/com/lonely/wolf/note/mq/rabbit/springboot/config/RabbitConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../message-queue/target/classes/com/lonely/wolf/note/mq/rabbit/springboot/consumer/SimpleConsumer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../message-queue/target/classes/com/lonely/wolf/note/mq/rabbit/springboot/consumer/SimpleConsumer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../message-queue/target/classes/com/lonely/wolf/note/mq/rabbit/springboot/controller/HelloRabbitController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../message-queue/target/classes/com/lonely/wolf/note/mq/rabbit/springboot/controller/HelloRabbitController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mini-spring.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mini/spring/v1/MyDispatcherServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mini/spring/v1/MyDispatcherServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../redis/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../redis/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../redis/redis.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../redis/src/main/java/com/lonely/wolf/note/redis/GuavaBloomFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../redis/src/main/java/com/lonely/wolf/note/redis/GuavaBloomFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../redis/target/classes/com/lonely/wolf/note/redis/GuavaBloomFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/../redis/target/classes/com/lonely/wolf/note/redis/GuavaBloomFilter.class" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -11,38 +48,126 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DefaultGradleProjectSettings">
-    <option name="testRunner" value="GRADLE" />
-    <option name="delegatedBuild" value="true" />
+    <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mini/spring/v2/webmvc/WolfDispatcherServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1334">
-              <caret line="58" column="23" lean-forward="true" selection-start-line="58" selection-start-column="23" selection-end-line="58" selection-end-column="23" />
+            <state relative-caret-position="258">
+              <caret line="82" column="25" lean-forward="true" selection-start-line="82" selection-start-column="25" selection-end-line="82" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mini/spring/v2/webmvc/WolfHandlerMapping.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="235">
+              <caret line="18" column="37" lean-forward="true" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mini/spring/v1/HandlerMapping.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="163">
-              <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+            <state relative-caret-position="230">
+              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mini/spring/v2/context/WolfApplicationContext.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mini/spring/v2/beans/WolfBeanWrapped.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="236">
+              <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
+              <folding>
+                <element signature="e#281#282#0" expanded="true" />
+                <element signature="e#335#336#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mini/spring/v1/MyDispatcherServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="185">
+              <caret line="268" column="17" selection-start-line="268" selection-start-column="17" selection-end-line="268" selection-end-column="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="253">
+              <caret line="11" column="37" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="37" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/annotation/WolfRequestParam.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mini/spring/annotation/WolfRequestParam.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mini/spring/v2/beans/MyFactoryBean.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mini/spring/v2/beans/MyBeanFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mini/spring/v2/context/MyApplicationContext.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mini/spring/v2/context/MyAbstractApplicationContext.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mini/spring/v2/beans/support/MyDefaultListableBeanFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mini/spring/v2/beans/WolfBeanFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mini/spring/v2/context/WolfAbstractApplicationContext.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mini/spring/v2/beans/config/WolfBeanDefinition.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mini/spring/v1/MyDispatcherServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mini/spring/v2/beans/support/WolfDefaultListableBeanFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mini/spring/v2/beans/support/WolfBeanDefinitionReader.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mini/spring/v2/core/WolfFactoryBean.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mini/spring/v2/core/WolfBeanFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mini/spring/v2/beans/WolfBeanWrapped.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mini/spring/v2/webmvc/WolfDispatcherServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mini/spring/v2/webmvc/WolfHandlerMapping.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mini/spring/v2/context/WolfApplicationContext.java" />
       </list>
     </option>
   </component>
@@ -55,25 +180,23 @@
     </option>
     <option name="importingSettings">
       <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
         <option name="jdkForImporter" value="1.8" />
         <option name="vmOptionsForImporter" value="-Xmx768m" />
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="3" />
     <option name="y" value="18" />
     <option name="width" value="1132" />
     <option name="height" value="494" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -107,29 +230,101 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="spring" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="mini-spring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mini-spring" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="spring" type="462c0819:PsiDirectoryNode" />
+              <item name="v1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mini-spring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mini-spring" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="spring" type="462c0819:PsiDirectoryNode" />
+              <item name="v2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mini-spring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mini-spring" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="spring" type="462c0819:PsiDirectoryNode" />
+              <item name="v2" type="462c0819:PsiDirectoryNode" />
+              <item name="beans" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mini-spring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mini-spring" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="spring" type="462c0819:PsiDirectoryNode" />
+              <item name="v2" type="462c0819:PsiDirectoryNode" />
+              <item name="context" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mini-spring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mini-spring" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="spring" type="462c0819:PsiDirectoryNode" />
+              <item name="v2" type="462c0819:PsiDirectoryNode" />
+              <item name="webmvc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mini-spring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mini-spring" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mini-spring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="mini-spring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: javax.servlet:servlet-api:2.4" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="mini-spring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: javax.servlet:servlet-api:2.4" type="70bed36:NamedLibraryElementNode" />
+              <item name="servlet-api-2.4.jar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mini-spring" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: javax.servlet:servlet-api:2.4" type="70bed36:NamedLibraryElementNode" />
+              <item name="servlet-api-2.4.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="servlet" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\lonely-wolf-note\mini-spring\src\main" />
-      <recent name="F:\lonely-wolf-note\mini-spring\src\main\java\com\lonely\wolf\note" />
-      <recent name="F:\lonely-wolf-note\mini-spring\src\main\resources" />
-    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -148,20 +343,20 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="d6967a07-94a3-47d3-9196-84d574d9ce89" name="Default Changelist" comment="" />
-      <created>1607851721422</created>
+      <changelist id="d0ebfbcf-0ff6-4df7-a731-028e84ece2e7" name="Default Changelist" comment="" />
+      <created>1612939968515</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1607851721422</updated>
-      <workItem from="1607851724178" duration="250000" />
+      <updated>1612939968515</updated>
+      <workItem from="1612939971492" duration="21270000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="250000" />
+    <option name="totallyTimeSpent" value="21270000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Designer" />
@@ -200,61 +395,182 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mini/spring/annotation/WolfService.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mini/spring/servlet/HelloServlet.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mini/spring/annotation/WolfGetMapping.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mini/spring/annotation/WolfController.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mini/spring/v1/MyDispatcherServlet.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mini/spring/v1/config/MyConfig.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mini/spring/service/HelloService.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mini/spring/annotation/WolfRequestParam.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mini/spring/annotation/WolfAutowired.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/com.lonely.wolf.note.mini.spring.v2.context.WolfApplicationContext">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
-          <caret column="32" lean-forward="true" selection-start-column="32" selection-end-column="32" />
+          <ID>JAVA</ID>
+          <OriginalElement>com.lonely.wolf.note.mini.spring.v2.context.WolfApplicationContext</OriginalElement>
+          <nodes>
+            <node x="" y="">com.lonely.wolf.note.mini.spring.v2.beans.config.WolfBeanDefinition</node>
+            <node x="" y="">com.lonely.wolf.note.mini.spring.v2.beans.WolfBeanFactory</node>
+            <node x="" y="">com.lonely.wolf.note.mini.spring.v2.context.WolfApplicationContext</node>
+            <node x="" y="">com.lonely.wolf.note.mini.spring.v2.beans.WolfFactoryBean</node>
+            <node x="" y="">com.lonely.wolf.note.mini.spring.v2.context.WolfAbstractApplicationContext</node>
+            <node x="" y="">com.lonely.wolf.note.mini.spring.v2.beans.support.WolfBeanDefinitionReader</node>
+            <node x="" y="">com.lonely.wolf.note.mini.spring.v2.beans.support.WolfDefaultListableBeanFactory</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="234.0" y="177.5" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mini/spring/v2/beans/config/WolfBeanDefinition.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-294">
+          <caret line="8" column="31" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="31" />
+          <folding>
+            <element signature="e#310#311#0" expanded="true" />
+            <element signature="e#346#347#0" expanded="true" />
+            <element signature="e#413#414#0" expanded="true" />
+            <element signature="e#463#464#0" expanded="true" />
+            <element signature="e#498#499#0" expanded="true" />
+            <element signature="e#531#532#0" expanded="true" />
+            <element signature="e#580#581#0" expanded="true" />
+            <element signature="e#617#618#0" expanded="true" />
+            <element signature="e#659#660#0" expanded="true" />
+            <element signature="e#697#698#0" expanded="true" />
+            <element signature="e#759#760#0" expanded="true" />
+            <element signature="e#813#814#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mini/spring/v1/config/MyConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mini/spring/v2/beans/support/WolfBeanDefinitionReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="77" column="53" selection-start-line="77" selection-start-column="31" selection-end-line="77" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3038#3039#0" expanded="true" />
+            <element signature="e#3067#3068#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mini/spring/v2/context/WolfAbstractApplicationContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mini/spring/v2/beans/support/WolfDefaultListableBeanFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="14" column="62" selection-start-line="14" selection-start-column="62" selection-end-line="14" selection-end-column="62" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#597#598#0" expanded="true" />
+            <element signature="e#628#629#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mini/spring/v2/core/WolfFactoryBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mini/spring/v2/core/WolfBeanFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" column="33" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="34" selection-start-column="34" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web_demo.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1334">
-          <caret line="58" column="23" lean-forward="true" selection-start-line="58" selection-start-column="23" selection-end-line="58" selection-end-column="23" />
+        <state relative-caret-position="253">
+          <caret line="11" column="37" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/javax/servlet/servlet-api/2.4/servlet-api-2.4.jar!/javax/servlet/ServletConfig.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mini/spring/v1/HandlerMapping.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+        <state relative-caret-position="230">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mini/spring/v1/MyDispatcherServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="268" column="17" selection-start-line="268" selection-start-column="17" selection-end-line="268" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mini/spring/v2/beans/WolfBeanWrapped.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
+          <folding>
+            <element signature="e#281#282#0" expanded="true" />
+            <element signature="e#335#336#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mini/spring/v2/context/WolfApplicationContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mini/spring/v2/webmvc/WolfHandlerMapping.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="18" column="37" lean-forward="true" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mini/spring/v2/webmvc/WolfDispatcherServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="82" column="25" lean-forward="true" selection-start-line="82" selection-start-column="25" selection-end-line="82" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

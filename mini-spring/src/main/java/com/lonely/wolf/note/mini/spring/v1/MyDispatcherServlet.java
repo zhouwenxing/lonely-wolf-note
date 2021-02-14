@@ -1,6 +1,6 @@
 package com.lonely.wolf.note.mini.spring.v1;
 
-import com.lonely.wolf.mini.spring.annotation.*;
+import com.lonely.wolf.note.mini.spring.annotation.*;
 import com.lonely.wolf.note.mini.spring.v1.config.MyConfig;
 import org.apache.commons.lang3.StringUtils;
 

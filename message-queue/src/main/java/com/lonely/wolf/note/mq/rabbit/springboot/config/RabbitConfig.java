@@ -19,7 +19,7 @@ import java.util.Map;
  * @date 2020/12/6
  * @since jdk1.8
  */
-@Configuration
+//@Configuration
 public class RabbitConfig {
 
 //    @Bean

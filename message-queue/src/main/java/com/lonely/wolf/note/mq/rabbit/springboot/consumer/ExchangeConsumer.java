@@ -15,7 +15,7 @@ import java.io.IOException;
  * @date 2020/12/20
  * @since jdk1.8
  */
-@Component
+//@Component
 public class ExchangeConsumer {
     /**
      * 监听绑定了direct交换机的的消息队列

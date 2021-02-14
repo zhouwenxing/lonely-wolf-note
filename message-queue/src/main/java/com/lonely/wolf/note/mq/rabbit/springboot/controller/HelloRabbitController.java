@@ -24,7 +24,7 @@ public class HelloRabbitController {
 //    private AmqpTemplate amqpTemplate;
 
     @GetMapping(value="/send")
-    public String clearVipInfo(@RequestParam(value = "msg",defaultValue = "no message") String msg){
+    public String helloSend(@RequestParam(value = "msg",defaultValue = "no message") String msg){
         //交换机可以默认为空
         rabbitTemplate.convertAndSend("SIMPLE_QUEUE",msg);
         return "succ";

@@ -1,7 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9198829f-bb6f-4666-9373-d11196816163" name="Default Changelist" comment="" />
+    <list default="true" id="9198829f-bb6f-4666-9373-d11196816163" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/springboot/controller/DelayQueueController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/springboot/delayQueue/comsumer/PluginDelayConsumer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/springboot/delayQueue/comsumer/TtlDelayConsumer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/springboot/delayQueue/config/PluginDelayRabbitConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/springboot/delayQueue/config/TtlDelayRabbitConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/message-queue.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/springboot/config/RabbitConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/springboot/config/RabbitConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/springboot/consumer/ExchangeConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/springboot/consumer/ExchangeConsumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/springboot/consumer/SimpleConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/springboot/consumer/SimpleConsumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/springboot/controller/HelloRabbitController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/springboot/controller/HelloRabbitController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lonely/wolf/note/mq/MqBootApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lonely/wolf/note/mq/MqBootApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lonely/wolf/note/mq/rabbit/javaapi/TestRabbitConsumer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lonely/wolf/note/mq/rabbit/javaapi/TestRabbitConsumer$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lonely/wolf/note/mq/rabbit/javaapi/TestRabbitConsumer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lonely/wolf/note/mq/rabbit/javaapi/TestRabbitConsumer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lonely/wolf/note/mq/rabbit/javaapi/TestRabbitProducter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lonely/wolf/note/mq/rabbit/javaapi/TestRabbitProducter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lonely/wolf/note/mq/rabbit/springboot/config/RabbitConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lonely/wolf/note/mq/rabbit/springboot/config/RabbitConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lonely/wolf/note/mq/rabbit/springboot/consumer/SimpleConsumer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lonely/wolf/note/mq/rabbit/springboot/consumer/SimpleConsumer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lonely/wolf/note/mq/rabbit/springboot/controller/HelloRabbitController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lonely/wolf/note/mq/rabbit/springboot/controller/HelloRabbitController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../redis/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../redis/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../redis/redis.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../redis/src/main/java/com/lonely/wolf/note/redis/GuavaBloomFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../redis/src/main/java/com/lonely/wolf/note/redis/GuavaBloomFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../redis/target/classes/com/lonely/wolf/note/redis/GuavaBloomFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/../redis/target/classes/com/lonely/wolf/note/redis/GuavaBloomFilter.class" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -11,18 +35,75 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DefaultGradleProjectSettings">
-    <option name="testRunner" value="GRADLE" />
-    <option name="delegatedBuild" value="true" />
+    <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>LONGLY_WOLF_ORDER_QUEUE</find>
+      <find>LONGLY_WOLF_PRODUCT_QUEUE</find>
+      <find>BAK_QUEUE</find>
+      <find>bakQueue</find>
+      <find>LONGLY_WOLF_BAK_FANOUT_EXCHANGE</find>
+      <find>NONE</find>
+      <find>MANUAL</find>
+      <find>TTL_DELAY_DEAD_LETTER_FANOUT_QUEUE</find>
+      <find>PLUGIN_DELAY_QUEUE</find>
+      <find>x-delay</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/springboot/consumer/SimpleConsumer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/MqBootApplication.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/springboot/consumer/MyConsumer1.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/javaapi/transaction/ConsumerWithTransaction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/javaapi/transaction/ProducterWithTransaction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/javaapi/transaction/TransactionConsumer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/javaapi/cofirm/ConfirmConsumer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/javaapi/transaction/TransactionProducter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/javaapi/cofirm/OneConfirmProducter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/javaapi/cofirm/MultipleConfirmProducter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/javaapi/cofirm/AsyncConfirmProducter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/javaapi/TestRabbitConsumer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/javaapi/TestRabbitProducter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/javaapi/cofirm/SingleConfirmProducter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/javaapi/returnlistener/ReturnListenerConsumer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/javaapi/returnlistener/ReturnListenerProducer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/javaapi/bakExchange/ReturnListenerConsumer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/javaapi/bakExchange/BakExchangeConsumer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/javaapi/bakExchange/BakExchangeProducer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/springboot/controller/RabbitExchangeController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/javaapi/ack/TestRabbitProducter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/javaapi/ack/AckProducter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/javaapi/ack/AckConsumer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/springboot/config/RabbitAckConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/springboot/config/RabbitConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/springboot/delayQueue/RabbitConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/springboot/delayQueue/config/RabbitConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/springboot/consumer/TtlDelayConsumer.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/springboot/controller/HelloRabbitController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/springboot/consumer/ExchangeConsumer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/springboot/consumer/SimpleConsumer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/springboot/controller/DelayQueueController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/springboot/delayQueue/config/TtlDelayRabbitConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/springboot/delayQueue/config/PluginDelayRabbitConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/springboot/delayQueue/comsumer/TtlDelayConsumer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/springboot/delayQueue/comsumer/PluginDelayConsumer.java" />
       </list>
     </option>
   </component>
@@ -47,29 +128,55 @@
     <option name="width" value="1132" />
     <option name="height" value="494" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="message-queue" type="b2602c69:ProjectViewProjectNode" />
+              <item name="message-queue" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="PackagesPane" />
-      <pane id="ProjectPane" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq" />
+    <property name="last_opened_file_path" value="F:/源码系列/spring源码/spring-framework-5.0.2.RELEASE" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.lonely.wolf.note.mq.rabbit.springboot.controller" />
+      <recent name="com.lonely.wolf.note.mq.rabbit.springboot.delayQueue.comsumer" />
+      <recent name="com.lonely.wolf.note.mq.rabbit.springboot.delayQueue" />
+      <recent name="com.lonely.wolf.note.mq.rabbit.javaapi.cofirm" />
+      <recent name="com.lonely.wolf.note.mq.rabbit.javaapi.transaction" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\github\lonely-wolf-note\message-queue\src\main\java\com\lonely\wolf\note\mq\rabbit\javaapi\ack" />
+      <recent name="F:\github\lonely-wolf-note\message-queue\src\main\java\com\lonely\wolf\note\mq\rabbit\javaapi\bakExchange" />
       <recent name="F:\lonely-wolf-note\message-queue\src\main\java\com\lonely\wolf\note\mq" />
     </key>
   </component>
@@ -85,13 +192,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.TestRabbitProducter">
-    <configuration name="TestRabbitConsumer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.lonely.wolf.note.mq.rabbit.javaapi.TestRabbitConsumer" />
+  <component name="RunManager" selected="Spring Boot.MqBootApplication">
+    <configuration name="AckConsumer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.lonely.wolf.note.mq.rabbit.javaapi.ack.AckConsumer" />
       <module name="message-queue" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.lonely.wolf.note.mq.rabbit.javaapi.*" />
+          <option name="PATTERN" value="com.lonely.wolf.note.mq.rabbit.javaapi.ack.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -99,23 +206,65 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestRabbitProducter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.lonely.wolf.note.mq.rabbit.javaapi.TestRabbitProducter" />
+    <configuration name="AckProducter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.lonely.wolf.note.mq.rabbit.javaapi.ack.AckProducter" />
       <module name="message-queue" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.lonely.wolf.note.mq.rabbit.javaapi.*" />
+          <option name="PATTERN" value="com.lonely.wolf.note.mq.rabbit.javaapi.ack.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BakExchangeConsumer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.lonely.wolf.note.mq.rabbit.javaapi.bakExchange.BakExchangeConsumer" />
+      <module name="message-queue" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.lonely.wolf.note.mq.rabbit.javaapi.bakExchange.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BakExchangeProducer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.lonely.wolf.note.mq.rabbit.javaapi.bakExchange.BakExchangeProducer" />
+      <module name="message-queue" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.lonely.wolf.note.mq.rabbit.javaapi.bakExchange.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MqBootApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="message-queue" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.lonely.wolf.note.mq.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.lonely.wolf.note.mq.MqBootApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TestRabbitProducter" />
-        <item itemvalue="Application.TestRabbitConsumer" />
+        <item itemvalue="Spring Boot.MqBootApplication" />
+        <item itemvalue="Application.AckConsumer" />
+        <item itemvalue="Application.AckProducter" />
+        <item itemvalue="Application.BakExchangeProducer" />
+        <item itemvalue="Application.BakExchangeConsumer" />
       </list>
     </recent_temporary>
   </component>
@@ -130,99 +279,581 @@
       <option name="presentableId" value="Default" />
       <updated>1607852038916</updated>
       <workItem from="1607852041269" duration="250000" />
+      <workItem from="1607862604667" duration="668000" />
+      <workItem from="1608255564067" duration="5271000" />
+      <workItem from="1608855562159" duration="26134000" />
+      <workItem from="1609205607878" duration="14068000" />
+      <workItem from="1609546653806" duration="33190000" />
+      <workItem from="1611455558289" duration="3019000" />
+      <workItem from="1611537997728" duration="8722000" />
+      <workItem from="1612153116290" duration="16605000" />
+      <workItem from="1612766879519" duration="3416000" />
     </task>
+    <task id="LOCAL-00001" summary="RabbitMQ博客2源码">
+      <created>1609598380275</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1609598380275</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="250000" />
+    <option name="totallyTimeSpent" value="111343000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info id="Designer" />
-      <window_info id="Image Layers" />
-      <window_info id="Capture Tool" />
-      <window_info id="UI Designer" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info id="Web" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24962178" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24659607" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Spring" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" />
-      <window_info anchor="bottom" id="Java Enterprise" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3289689" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3590164" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.50163937" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Maven" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Database" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="11" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" />
+      <window_info anchor="bottom" id="Database Changes" order="13" />
+      <window_info anchor="bottom" id="Version Control" order="14" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="RabbitMQ博客2源码" />
+    <option name="LAST_COMMIT_MESSAGE" value="RabbitMQ博客2源码" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/javaapi/transaction/TransactionProducter.java</url>
+          <line>26</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/amqp/spring-rabbit/2.3.1/spring-rabbit-2.3.1-sources.jar!/org/springframework/amqp/rabbit/core/RabbitTemplate.java</url>
+          <line>2276</line>
+          <properties />
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/amqp/spring-rabbit/2.3.1/spring-rabbit-2.3.1-sources.jar!/org/springframework/amqp/rabbit/core/RabbitTemplate.java</url>
+          <line>2292</line>
+          <properties />
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/springboot/config/RabbitConfig.java</url>
+          <line>179</line>
+          <properties />
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/javaapi/returnListener/ReturnListenerProducer.java</url>
+          <line>33</line>
+          <properties />
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/javaapi/returnListener/ReturnListenerProducer.java</url>
+          <line>40</line>
+          <properties />
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/javaapi/ack/AckConsumer.java</url>
+          <line>37</line>
+          <properties />
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/javaapi/ack/AckConsumer.java</url>
+          <line>34</line>
+          <properties />
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/springboot/consumer/ExchangeConsumer.java</url>
+          <line>34</line>
+          <properties />
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/springboot/config/RabbitAckConfig.java</url>
+          <line>21</line>
+          <properties />
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/springboot/config/RabbitAckConfig.java</url>
+          <line>25</line>
+          <properties />
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/springboot/consumer/ExchangeConsumer.java</url>
+          <line>25</line>
+          <properties />
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/springboot/delayQueue/comsumer/PluginDelayConsumer.java</url>
+          <line>21</line>
+          <properties />
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/springboot/controller/DelayQueueController.java</url>
+          <line>44</line>
+          <properties />
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>map.get(&quot;ackType&quot;).toString().equals(&quot;ack&quot;)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>map.get(&quot;ackType&quot;).toString()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>map.get(&quot;ackType&quot;)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>properties.getHeaders().get(&quot;ackType&quot;)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>properties.getHeaders()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>rabbitTemplate</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/javaapi/cofirm/AsyncConfirmProducter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
+        <state relative-caret-position="46">
+          <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/springboot/controller/HelloRabbitController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/javaapi/cofirm/MultipleConfirmProducter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        <state relative-caret-position="247">
+          <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/springboot/consumer/SimpleConsumer.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/javaapi/cofirm/ConfirmConsumer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
+        <state relative-caret-position="138">
+          <caret line="13" column="55" lean-forward="true" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/javaapi/cofirm/SingleConfirmProducter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="24" column="68" selection-start-line="24" selection-start-column="68" selection-end-line="24" selection-end-column="68" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/rabbitmq/amqp-client/5.10.0/amqp-client-5.10.0-sources.jar!/com/rabbitmq/client/impl/AMQChannel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="128" column="26" selection-start-line="128" selection-start-column="26" selection-end-line="128" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/rabbitmq/amqp-client/5.10.0/amqp-client-5.10.0-sources.jar!/com/rabbitmq/client/impl/ChannelN.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="892" column="15" selection-start-line="892" selection-start-column="15" selection-end-line="892" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/rabbitmq/amqp-client/5.10.0/amqp-client-5.10.0-sources.jar!/com/rabbitmq/client/impl/recovery/AutorecoveringChannel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="300" column="15" selection-start-line="300" selection-start-column="15" selection-end-line="300" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/javaapi/returnListener/ReturnListenerProducer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/javaapi/returnListener/ReturnListenerConsumer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="33" column="34" selection-start-line="33" selection-start-column="34" selection-end-line="33" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/rabbitmq/amqp-client/5.10.0/amqp-client-5.10.0-sources.jar!/com/rabbitmq/client/BuiltinExchangeType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/amqp/spring-amqp/2.3.1/spring-amqp-2.3.1.jar!/org/springframework/amqp/core/MessageProperties.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
           <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/springboot/config/RabbitConfig.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/amqp/spring-rabbit/2.3.1/spring-rabbit-2.3.1-sources.jar!/org/springframework/amqp/rabbit/connection/AbstractConnectionFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        <state relative-caret-position="23">
+          <caret line="69" column="55" selection-start-line="69" selection-start-column="55" selection-end-line="69" selection-end-column="55" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/javaapi/TestRabbitConsumer.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/2.4.0/spring-boot-autoconfigure-2.4.0.jar!/org/springframework/boot/autoconfigure/amqp/RetryTemplateFactory.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="23" column="31" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="58" />
+        <state relative-caret-position="62">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/2.4.0/spring-boot-autoconfigure-2.4.0.jar!/org/springframework/boot/autoconfigure/amqp/SimpleRabbitListenerContainerFactoryConfigurer.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/2.4.0/spring-boot-autoconfigure-2.4.0.jar!/org/springframework/boot/autoconfigure/amqp/AbstractRabbitListenerContainerFactoryConfigurer.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-184">
+          <caret line="19" column="39" lean-forward="true" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/javaapi/TestRabbitProducter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="24" column="24" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="58" />
+        <state relative-caret-position="177">
+          <caret line="45" column="24" lean-forward="true" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/javaapi/bakExchange/BakExchangeConsumer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-230">
+          <caret line="13" column="49" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/javaapi/bakExchange/BakExchangeProducer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="33" column="65" lean-forward="true" selection-start-line="26" selection-start-column="7" selection-end-line="33" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/rabbitmq/amqp-client/5.10.0/amqp-client-5.10.0-sources.jar!/com/rabbitmq/client/AMQP.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="1812" column="34" selection-start-line="1812" selection-start-column="34" selection-end-line="1812" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/rabbitmq/amqp-client/5.10.0/amqp-client-5.10.0-sources.jar!/com/rabbitmq/client/Channel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="605" column="83" selection-start-line="605" selection-start-column="83" selection-end-line="605" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/javaapi/TestRabbitConsumer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="35" column="46" selection-start-line="35" selection-start-column="46" selection-end-line="35" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/rabbitmq/amqp-client/5.10.0/amqp-client-5.10.0-sources.jar!/com/rabbitmq/client/impl/ConsumerDispatcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="153" selection-start-line="153" selection-end-line="153" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Program Files/Java/jdk1.8.0_151/src.zip!/java/util/Map.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="589" column="27" lean-forward="true" selection-start-line="589" selection-start-column="27" selection-end-line="589" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/rabbitmq/amqp-client/5.10.0/amqp-client-5.10.0-sources.jar!/com/rabbitmq/client/Consumer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="39" column="27" lean-forward="true" selection-start-line="39" selection-start-column="27" selection-end-line="39" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/javaapi/ack/AckConsumer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="52" column="1" lean-forward="true" selection-end-line="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/javaapi/ack/AckProducter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
+          <folding>
+            <element signature="e#798#814#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/2.4.0/spring-boot-autoconfigure-2.4.0.jar!/org/springframework/boot/autoconfigure/amqp/RabbitProperties.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="630" column="12" selection-start-line="630" selection-start-column="12" selection-end-line="630" selection-end-column="12" />
+          <folding>
+            <element signature="e#18999#19000#0" expanded="true" />
+            <element signature="e#19048#19049#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/2.4.0/spring-boot-autoconfigure-2.4.0-sources.jar!/org/springframework/boot/autoconfigure/amqp/RabbitProperties.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="813" column="24" selection-start-line="813" selection-start-column="24" selection-end-line="813" selection-end-column="24" />
+          <folding>
+            <element signature="e#15017#15018#0" expanded="true" />
+            <element signature="e#15051#15052#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/amqp/spring-rabbit/2.3.1/spring-rabbit-2.3.1-sources.jar!/org/springframework/amqp/rabbit/annotation/RabbitListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="107" column="18" selection-start-line="107" selection-start-column="18" selection-end-line="107" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="13" selection-start-line="4" selection-start-column="4" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Program Files/Java/jdk1.8.0_151/src.zip!/java/util/concurrent/DelayQueue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="69" column="23" selection-start-line="69" selection-start-column="13" selection-end-line="69" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/amqp/spring-rabbit/2.3.1/spring-rabbit-2.3.1-sources.jar!/org/springframework/amqp/rabbit/annotation/RabbitHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="48" column="18" selection-start-line="48" selection-start-column="18" selection-end-line="48" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/springboot/consumer/TtlDelayConsumer.java" />
+    <entry file="jar://D:/Program Files/Java/jdk1.8.0_151/src.zip!/java/text/DateFormat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6739">
+          <caret line="342" column="24" selection-start-line="342" selection-start-column="24" selection-end-line="342" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/MqBootApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+        <state relative-caret-position="230">
+          <caret line="11" column="23" lean-forward="true" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/springboot/consumer/SimpleConsumer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/springboot/config/RabbitAckConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="22" column="68" selection-start-line="22" selection-start-column="61" selection-end-line="22" selection-end-column="68" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/springboot/config/RabbitConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="22" column="27" lean-forward="true" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/amqp/spring-rabbit/2.3.1/spring-rabbit-2.3.1-sources.jar!/org/springframework/amqp/rabbit/core/RabbitTemplate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="1105" column="16" selection-start-line="1105" selection-start-column="16" selection-end-line="1105" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/amqp/spring-amqp/2.3.1/spring-amqp-2.3.1.jar!/org/springframework/amqp/core/BindingBuilder.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="69" column="23" selection-start-line="69" selection-start-column="23" selection-end-line="69" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/amqp/spring-amqp/2.3.1/spring-amqp-2.3.1.jar!/org/springframework/amqp/core/AbstractExchange.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/amqp/spring-amqp/2.3.1/spring-amqp-2.3.1.jar!/org/springframework/amqp/core/TopicExchange.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="31">
+          <caret line="9" column="47" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/springboot/controller/HelloRabbitController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="26" column="95" selection-start-line="26" selection-start-column="92" selection-end-line="26" selection-end-column="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/springboot/consumer/ExchangeConsumer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/springboot/controller/RabbitExchangeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="60" column="25" selection-start-line="60" selection-start-column="25" selection-end-line="60" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/springboot/delayQueue/comsumer/TtlDelayConsumer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="16" column="9" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/springboot/controller/DelayQueueController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="34" column="69" selection-start-line="34" selection-start-column="69" selection-end-line="34" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/springboot/delayQueue/config/PluginDelayRabbitConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/springboot/delayQueue/config/TtlDelayRabbitConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/mq/rabbit/springboot/delayQueue/comsumer/PluginDelayConsumer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="19" column="48" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

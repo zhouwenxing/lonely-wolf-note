@@ -5,10 +5,10 @@ spring:
     username: admin
     password: 123456
 #    publisher-confirms: true 是否发送到交换机消息消息回调(2.0版本过期)
-    publisher-confirm-type: correlated # none-表示禁用回调(默认) simple- 参考RabbitExchangeController#sendWithSimpleConfirm()方法 # 未路由到队列的消息回调
-    listener:
-      type: simple # direct类型是2.0之后才有的
+#    publisher-confirm-type: correlated # none-表示禁用回调(默认) simple- 参考RabbitExchangeController#sendWithSimpleConfirm()方法 # 未路由到队列的消息回调
+#    listener:
+#      type: simple # direct类型是2.0之后才有的
 #      direct:
 #        acknowledge-mode: manual
-      simple:
-        acknowledge-mode: manual
+#      simple:
+#        acknowledge-mode: manual

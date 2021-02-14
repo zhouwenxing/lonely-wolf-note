@@ -11,8 +11,8 @@ import org.springframework.stereotype.Component;
  * @date 2020/12/6
  * @since jdk1.8
  */
-@RabbitListener(queues = "SIMPLE_QUEUE")
-@Component
+//@RabbitListener(queues = "SIMPLE_QUEUE")
+//@Component
 public class SimpleConsumer {
 
     @RabbitHandler
