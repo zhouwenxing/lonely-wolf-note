@@ -8,7 +8,9 @@ package com.lonely.wolf.note.mini.spring.v2.beans;
  */
 public class WolfBeanWrapped {
     private Object wrappedInstance;
-    private Class<?> wrappedClass;
+
+    public WolfBeanWrapped() {
+    }
 
     public WolfBeanWrapped(Object wrappedInstance) {
         this.wrappedInstance = wrappedInstance;
@@ -20,6 +22,6 @@ public class WolfBeanWrapped {
 
 
     public Class<?> getWrappedClass(){
-        return this.wrappedClass.getClass();
+        return this.wrappedInstance.getClass();
     }
 }

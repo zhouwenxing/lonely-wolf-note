@@ -7,7 +7,7 @@
 	<display-name>Lonely Wolf Web Application</display-name>
 	<servlet>
 		<servlet-name>myDispatcherServlet</servlet-name>
-		<servlet-class>com.lonely.wolf.note.mini.spring.v1.MyDispatcherServlet</servlet-class>
+		<servlet-class>com.lonely.wolf.note.mini.spring.v2.webmvc.WolfDispatcherServlet</servlet-class>
 		<init-param>
 			<param-name>defaultConfig</param-name>
 			<param-value>application.properties</param-value>

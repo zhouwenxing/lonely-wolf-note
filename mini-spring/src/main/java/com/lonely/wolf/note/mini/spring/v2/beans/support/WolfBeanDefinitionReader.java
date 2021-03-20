@@ -19,9 +19,9 @@ import java.util.Properties;
  */
 public class WolfBeanDefinitionReader {
 
-    private Properties config;
+    private Properties config = new Properties();
 
-    private final String SCAN_PACKAGE = "basePackage";
+    private final String SCAN_PACKAGE = "basePackages";
 
     private List<String> registryBeanClass = new ArrayList<>();
 
@@ -75,7 +75,11 @@ public class WolfBeanDefinitionReader {
 
                 Class<?>[] interfaces = beanClass.getInterfaces();
                 for (Class<?> c : interfaces){
-                    result.add(doCreateBeanDefinition(c));
+                    WolfBeanDefinition beanDefinition = doCreateBeanDefinition(c);
+                    if (null == beanDefinition){
+                        continue;
+                    }
+                    result.add(beanDefinition);
                 }
             } catch (ClassNotFoundException e) {
                 e.printStackTrace();
@@ -93,6 +97,7 @@ public class WolfBeanDefinitionReader {
                 wolfBeanDefinition.setBeanClassName(clazz.getName());
                 wolfBeanDefinition.setFactoryBeanName(toLowerFirstLetterCase(clazz.getSimpleName()));
                 wolfBeanDefinition.setLazyInit(false);
+                return wolfBeanDefinition;
             }
         }catch (Exception e){
             e.printStackTrace();

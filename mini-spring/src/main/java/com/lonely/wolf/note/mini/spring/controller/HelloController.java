@@ -26,4 +26,24 @@ public class HelloController {
         response.setContentType("text/html;charset=utf-8");
         response.getWriter().write("Hello：" + name);
     }
+
+
+    public static void main(String[] args) {
+        int cap = 26;
+        int n = cap - 1;
+
+        System.out.println(n);
+        n |= n >>> 1;
+        System.out.println(n);
+        n |= n >>> 2;
+        System.out.println(n);
+        n |= n >>> 4;
+        System.out.println(n);
+        n |= n >>> 8;
+        System.out.println(n);
+        n |= n >>> 31;
+        System.out.println(n);
+
+
+    }
 }

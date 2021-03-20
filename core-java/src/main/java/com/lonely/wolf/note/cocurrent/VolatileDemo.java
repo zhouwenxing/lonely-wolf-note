@@ -11,10 +11,9 @@ public class VolatileDemo {
 
     public static void main(String[] args) throws InterruptedException {
         new Thread(()->{
-            int i = 0;
             while (!finishFlag){
-                i++;
             }
+            System.out.println("end");
         },"t1").start();
         Thread.sleep(1000);//确保t1先进入while循环后主线程才修改finishFlag
         finishFlag = true;

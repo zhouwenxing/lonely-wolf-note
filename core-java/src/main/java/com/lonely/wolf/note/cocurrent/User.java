@@ -7,5 +7,20 @@ package com.lonely.wolf.note.cocurrent;
  * @since jdk1.8
  */
 public class User {
+    public User() {
+    }
 
+    public User(int age) {
+        this.age = age;
+    }
+
+    private int age;
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
 }

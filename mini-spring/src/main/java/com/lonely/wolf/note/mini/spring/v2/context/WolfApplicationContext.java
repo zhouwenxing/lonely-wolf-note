@@ -14,6 +14,7 @@ import java.io.File;
 import java.lang.reflect.Field;
 import java.util.List;
 import java.util.Map;
+import java.util.Properties;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
@@ -31,6 +32,7 @@ public class WolfApplicationContext extends WolfDefaultListableBeanFactory imple
     //通用的IOC容器
     private Map<String,WolfBeanWrapped> factoryBeanInstanceCache = new ConcurrentHashMap<>();
 
+
     public WolfApplicationContext(String... configLocations) {
         this.configLocations = configLocations;
         this.refresh();
@@ -39,13 +41,15 @@ public class WolfApplicationContext extends WolfDefaultListableBeanFactory imple
     @Override
     public Object getBean(String beanName) {
         //1.初始化
-        Object instance = initBean(beanName,new WolfBeanDefinition());
+        WolfBeanDefinition wolfBeanDefinition = this.beanDefinitionMap.get(beanName);
+        Object instance = initBean(beanName,wolfBeanDefinition);
 
         WolfBeanWrapped beanWrapper = new WolfBeanWrapped(instance);
+        this.factoryBeanInstanceCache.put(beanName,beanWrapper);
         //2.注入
-        populateBean(beanName,new WolfBeanDefinition(),new WolfBeanWrapped(instance));
+        populateBean(beanWrapper);
 
-        return null;
+        return this.factoryBeanInstanceCache.get(beanName).getWrappedInstance();
     }
 
     @Override
@@ -53,9 +57,13 @@ public class WolfApplicationContext extends WolfDefaultListableBeanFactory imple
         return null;
     }
 
-    private void populateBean(String beanName, WolfBeanDefinition wolfBeanDefinition, WolfBeanWrapped wolfBeanWrapped) {
+    private void populateBean(WolfBeanWrapped wolfBeanWrapped) {
         Object instance = wolfBeanWrapped.getWrappedInstance();
+        if (null == instance){
+            return;
+        }
         Class<?> clazz = wolfBeanWrapped.getWrappedClass();
+
         if (!(clazz.isAnnotationPresent(WolfController.class) || clazz.isAnnotationPresent(WolfService.class))){
             return;
         }
@@ -150,5 +158,9 @@ public class WolfApplicationContext extends WolfDefaultListableBeanFactory imple
         for (WolfBeanDefinition wolfBeanDefinition : beanDefinitions){
             super.beanDefinitionMap.put(wolfBeanDefinition.getFactoryBeanName(),wolfBeanDefinition);
         }
+    }
+
+    public Properties getConfig(){
+        return this.wolfBeanDefinitionReader.getConfig();
     }
 }

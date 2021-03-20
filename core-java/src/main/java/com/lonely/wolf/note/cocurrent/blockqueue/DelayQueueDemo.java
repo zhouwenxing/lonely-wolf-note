@@ -1,6 +1,7 @@
 package com.lonely.wolf.note.cocurrent.blockqueue;
 
-import com.lonely.wolf.note.blockqueue.model.MyElement;
+
+import com.lonely.wolf.note.cocurrent.blockqueue.model.MyElement;
 
 import java.util.ArrayList;
 import java.util.List;
