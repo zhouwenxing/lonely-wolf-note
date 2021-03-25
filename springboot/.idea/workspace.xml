@@ -5,45 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="01b17792-9727-406d-8604-1bb9fa77677f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../core-java/src/main/java/com/lonely/wolf/note/cocurrent/VolatileArrDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mini-spring/src/main/java/com/lonely/wolf/note/mini/spring/v2/webmvc/WolfHandlerAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mini-spring/src/main/java/com/lonely/wolf/note/mini/spring/v2/webmvc/WolfModelAndView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mini-spring/src/main/java/com/lonely/wolf/note/mini/spring/v2/webmvc/WolfView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mini-spring/src/main/java/com/lonely/wolf/note/mini/spring/v2/webmvc/WolfViewResolver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mini-spring/src/main/resources/template/404.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mini-spring/src/main/resources/template/500.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/springboot/inject/IWolf.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/springboot/inject/InterfaceInject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/springboot/inject/InterfaceInject2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/springboot/inject/MyElement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/springboot/inject/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/springboot/inject/Wolf1Bean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/springboot/inject/Wolf2Bean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/springboot/inject/Wolf3Bean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/springboot/util/SpringContextUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/springboot/util/SpringUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../core-java/.idea/uiDesigner.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lonelyWolf-spring-boot-starter/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lonelyWolf-spring-boot-starter/src/main/java/com/lonely/wolf/note/JsonSerial.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lonelyWolf-spring-boot-starter/src/main/java/com/lonely/wolf/note/MyAutoConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lonelyWolf-spring-boot-starter/src/main/resources/META-INF/spring.factories" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/springboot/autoconfig/MyConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/springboot/autoconfig/TestImport.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../core-java/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../core-java/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../core-java/core-java.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../core-java/src/main/java/com/lonely/wolf/note/Temp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../core-java/src/main/java/com/lonely/wolf/note/cocurrent/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../core-java/src/main/java/com/lonely/wolf/note/cocurrent/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../core-java/src/main/java/com/lonely/wolf/note/cocurrent/VolatileDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../core-java/src/main/java/com/lonely/wolf/note/cocurrent/VolatileDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../core-java/src/main/java/com/lonely/wolf/note/cocurrent/blockqueue/DelayQueueDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../core-java/src/main/java/com/lonely/wolf/note/cocurrent/blockqueue/DelayQueueDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../core-java/target/classes/com/lonely/wolf/note/T.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mini-spring/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mini-spring/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mini-spring/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mini-spring/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mini-spring/src/main/java/com/lonely/wolf/note/mini/spring/controller/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../mini-spring/src/main/java/com/lonely/wolf/note/mini/spring/controller/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mini-spring/src/main/java/com/lonely/wolf/note/mini/spring/v2/beans/WolfBeanWrapped.java" beforeDir="false" afterPath="$PROJECT_DIR$/../mini-spring/src/main/java/com/lonely/wolf/note/mini/spring/v2/beans/WolfBeanWrapped.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mini-spring/src/main/java/com/lonely/wolf/note/mini/spring/v2/beans/support/WolfBeanDefinitionReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/../mini-spring/src/main/java/com/lonely/wolf/note/mini/spring/v2/beans/support/WolfBeanDefinitionReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mini-spring/src/main/java/com/lonely/wolf/note/mini/spring/v2/context/WolfApplicationContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/../mini-spring/src/main/java/com/lonely/wolf/note/mini/spring/v2/context/WolfApplicationContext.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mini-spring/src/main/java/com/lonely/wolf/note/mini/spring/v2/webmvc/WolfDispatcherServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../mini-spring/src/main/java/com/lonely/wolf/note/mini/spring/v2/webmvc/WolfDispatcherServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mini-spring/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../mini-spring/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mini-spring/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../mini-spring/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../core-java/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../core-java/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/springboot/MySpringBootApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/springboot/MySpringBootApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/springboot/demo/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/springboot/demo/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/springboot/inject/InterfaceInject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/springboot/inject/InterfaceInject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lonely/wolf/note/springboot/MySpringBootApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lonely/wolf/note/springboot/MySpringBootApplication.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/lonely/wolf/note/springboot/demo/HelloController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lonely/wolf/note/springboot/demo/HelloController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,6 +40,19 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/2.4.0/spring-boot-autoconfigure-2.4.0-sources.jar!/org/springframework/boot/autoconfigure/AutoConfigurationImportSelector.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/2.4.0/spring-boot-autoconfigure-2.4.0-sources.jar!/org/springframework/boot/autoconfigure/SpringBootApplication.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/2.4.0/spring-boot-autoconfigure-2.4.0-sources.jar!/org/springframework/boot/autoconfigure/EnableAutoConfiguration.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -95,7 +83,9 @@
     <option name="height" value="494" />
   </component>
   <component name="ProjectId" id="1puxS4wQBq0MjjT8hbPuQYFXFf2" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -121,6 +111,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -135,26 +126,27 @@
     <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\lonely-wolf-note\springboot\src\main\java\com\lonely\wolf\note\springboot" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.lonely.wolf.note" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.lonely.wolf.note.springboot.inject" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -191,8 +183,17 @@
       <updated>1607852925249</updated>
       <workItem from="1607852927373" duration="93000" />
       <workItem from="1616046775396" duration="17477000" />
-      <workItem from="1616202539057" duration="1265000" />
+      <workItem from="1616202539057" duration="15901000" />
+      <workItem from="1616391460901" duration="7306000" />
     </task>
+    <task id="LOCAL-00001" summary="提交">
+      <created>1616208823851</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1616208823851</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -238,17 +239,22 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="提交" />
+    <option name="LAST_COMMIT_MESSAGE" value="提交" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/springboot/demo/HelloController.java</url>
-          <line>54</line>
+          <line>61</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/lonely/wolf/note/springboot/demo/HelloController.java</url>
-          <line>41</line>
+          <line>48</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>

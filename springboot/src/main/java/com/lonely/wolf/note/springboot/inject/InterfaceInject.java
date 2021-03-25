@@ -15,8 +15,7 @@ import java.util.Map;
  */
 @Component
 public class InterfaceInject {
-//    @Resource(name = "wolf2Bean",type = Wolf2Bean.class)
-    @Autowired
+    @Resource(name = "wolf2Bean",type = Wolf2Bean.class)
     private IWolf iWolf;
     @Autowired
     List<IWolf> list;

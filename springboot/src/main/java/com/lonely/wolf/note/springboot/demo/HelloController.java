@@ -1,5 +1,7 @@
 package com.lonely.wolf.note.springboot.demo;
 
+import com.lonely.wolf.note.JsonSerial;
+import com.lonely.wolf.note.springboot.autoconfig.TestImport;
 import com.lonely.wolf.note.springboot.inject.*;
 import com.lonely.wolf.note.springboot.util.SpringContextUtil;
 import com.lonely.wolf.note.springboot.util.SpringUtil;
@@ -33,6 +35,11 @@ public class HelloController {
     private InterfaceInject2 interfaceInject2;
     @Autowired
     private MyElement myElement;
+    @Autowired
+    private TestImport testImport;
+
+    @Autowired
+    private JsonSerial jsonSerial;
 
 
     @GetMapping("/demo")
