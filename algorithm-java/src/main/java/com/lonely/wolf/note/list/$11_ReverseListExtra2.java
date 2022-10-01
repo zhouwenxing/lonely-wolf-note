@@ -21,13 +21,26 @@ package com.lonely.wolf.note.list;
  */
 public class $11_ReverseListExtra2 {
     public static void main(String[] args) {
-        int[] arr = {1,2,3,4,5};
-        ListNode head = ListNodeInit.initLinkedList(arr);
-        ListNode resultNode = reverse1(head,6);
-        System.out.println(ListNodeInit.toString(resultNode));
-//        ListNode resultNode2 = reverse1_1(head,6);
+        int[] arr = {1,2,3,4,5,6,7,8,9,10};
+//        ListNode head = ListNodeInit.initLinkedList(arr);
+//        ListNode resultNode = reverse1(head,3);
+//        System.out.println(ListNodeInit.toString(resultNode));
+//
+//        ListNode head2 = ListNodeInit.initLinkedList(arr);
+//        ListNode resultNode2 = reverse1(head2,3);
 //        System.out.println(ListNodeInit.toString(resultNode2));
+//
+//        ListNode head3 = ListNodeInit.initLinkedList(arr);
+//        ListNode resultNode3 = reverse1_1(head3,6);
+//        System.out.println(ListNodeInit.toString(resultNode3));
+
+        ListNode head4 = ListNodeInit.initLinkedList(arr);
+        ListNode resultNode4 = swapPairs(head4);
+        System.out.println(ListNodeInit.toString(resultNode4));
+
     }
+
+
 
 
     /**
@@ -132,4 +145,65 @@ public class $11_ReverseListExtra2 {
 
         return sentry.next;
     }
+
+
+
+
+    /**
+     * Leetcode 24 给定一个链表，两两交换其中相邻的节点，并返回交换后的链表。
+     * 注意：你不能只是单纯的改变节点内部的值，而是需要实际的进行节点交换。
+     *
+     * 解题思路：这道题其实把上面 每 k 个节点⼀组进⾏翻转题目中k=2的场景。
+     * 不过当确定 k 为 2时，可以有更简单的思路，那就是把后面两个节点都读出来，然后直接交换即可。
+     * @param head
+     * @return
+     */
+    public static ListNode swapPairs(ListNode head){
+        if (null == head || null == head.next || null == head.next.next){
+            return head;
+        }
+
+        ListNode sentry = new ListNode(-1);
+        sentry.next = head;
+
+        ListNode curr = sentry;
+        while (null != curr.next && null != curr.next.next){
+            ListNode next = curr.next;
+            ListNode nextnext = curr.next.next;
+
+            curr.next = nextnext;
+            next.next = nextnext.next;
+            nextnext.next = next;
+
+            curr = next;//此时next已经被换到后面
+        }
+        return sentry.next;
+    }
+
+    /**----------------------------------------------以下为复盘练习使用方法-----------------------------------------*/
+
+    public static ListNode testReverse1(ListNode head,int k){
+        if (null == head || head.next == null || k <= 1){
+            return head;
+        }
+        int len = ListNodeInit.getListLength(head);
+        int rc = len / k;
+
+        int i=1;
+        ListNode sentry = new ListNode(-1);
+        sentry.next = head;
+        ListNode pre = null;
+        ListNode curr = head;
+        while (i++ < rc){
+            int j = 0;
+            while (j<=k && null != curr){
+                ListNode next = curr.next;
+                curr.next = pre;
+                pre = curr;
+                curr = next;
+            }
+        }
+        return sentry.next;
+    }
+
 }

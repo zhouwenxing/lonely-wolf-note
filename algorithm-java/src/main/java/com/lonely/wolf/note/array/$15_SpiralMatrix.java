@@ -15,8 +15,28 @@ public class $15_SpiralMatrix {
         int[][] matrix = {{1,2,3},{4,5,6},{7,8,9}};
         printMatrix(matrix);//螺旋矩阵打印
 
-        System.out.println(JSONObject.toJSONString(generateMatrix(3)));//螺旋矩阵生成
+//        System.out.println(JSONObject.toJSONString(generateMatrix(3)));//螺旋矩阵生成
 
+
+        int[][] arr1 ={{1,2,3},{4,5,6},{7,8,9}};//{{7,4,1},{8,5,2},{9,6,3}}
+        rotateWithReplaceOneByOne(arr1);
+        System.out.println(JSONObject.toJSONString(arr1));
+        int[][] arr2 ={{1,2,3},{4,5,6},{7,8,9}};//{{7,4,1},{8,5,2},{9,6,3}}
+        rotateWithNewArray(arr2);
+        System.out.println(JSONObject.toJSONString(arr2));
+        int[][] arr3 ={{1,2,3},{4,5,6},{7,8,9}};//{{7,4,1},{8,5,2},{9,6,3}}
+        rotateWithTwoRollback(arr3);
+        System.out.println(JSONObject.toJSONString(arr3));
+        System.out.println("--------------------------------------");
+        int[][] arr11 = {{5,1,9,11},{2,4,8,10},{13,3,6,7},{15,14,12,16}};//{{15,13,2,5},{14,3,4,1},{12,6,8,9},{16,7,10,11}}
+        rotateWithReplaceOneByOne(arr11);
+        System.out.println(JSONObject.toJSONString(arr11));
+        int[][] arr22 = {{5,1,9,11},{2,4,8,10},{13,3,6,7},{15,14,12,16}};//{{15,13,2,5},{14,3,4,1},{12,6,8,9},{16,7,10,11}}
+        rotateWithNewArray(arr22);
+        System.out.println(JSONObject.toJSONString(arr22));
+        int[][] arr33 = {{5,1,9,11},{2,4,8,10},{13,3,6,7},{15,14,12,16}};//{{15,13,2,5},{14,3,4,1},{12,6,8,9},{16,7,10,11}}
+        rotateWithTwoRollback(arr33);
+        System.out.println(JSONObject.toJSONString(arr33));
     }
 
 
@@ -226,6 +246,15 @@ public class $15_SpiralMatrix {
      * 给定一个 n*n 的二维矩阵 matrix 表示一个图像。请你将图像顺时针旋转 90 度。
      * 你必须在【原地】旋转图像，这意味着你需要直接修改输入的二维矩阵。请不要使用另一个矩阵来旋转图像。
      *
+     * 输入：matrix = {{1,2,3},{4,5,6},{7,8,9}}
+     * 输出：{{7,4,1},{8,5,2},{9,6,3}}
+     * 输入：matrix = {{5,1,9,11},{2,4,8,10},{13,3,6,7},{15,14,12,16}}
+     * 输出：{{15,13,2,5},{14,3,4,1},{12,6,8,9},{16,7,10,11}}
+     *
+     * 来源：力扣（LeetCode）
+     * 链接：https://leetcode.cn/problems/rotate-image
+     * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+     *
      * 解题思路1：利用另一个矩阵来临时存储，最后再替换回来（这种方法不符合题目要求，但是仍然是一种解题思路）
      * 通过画图找规律，可以发现，旋转90°后，对于矩阵中第 i 行的第 j 个元素，在旋转后，它出现在倒数第 i 列的第 j 个位置。
      * 也就是可以得到：matrix[row][col] = matrix[col][n-row-1]
@@ -262,18 +291,33 @@ public class $15_SpiralMatrix {
      * 也就是：row=col && col=n-row-1
      * 所以又可以得到：matrix[n−row−1][n−col−1] = matrix[col][n−row−1]
      * 依次计算，可以得到4个位置的替换点：
-     * temp = matrix[n−col−1][row]
+     * matrix[row][col] = matrix[n−col−1][row]
      * matrix[n−col−1][row] = matrix[n−row−1][n−col−1]
      * matrix[n−row−1][n−col−1] = matrix[col][n−row−1]
      * matrix[col][n−row−1] = matrix[row][col]
-     * 也就是：temp=A=matrix[row][col]，B=matrix[col][n−row−1]，C=matrix[n−row−1][n−col−1]，D=matrix[n−col−1][row]
+     * 知道了怎么遍历之后，就需要知道遍历到哪里需要停止
+     * 1.因为每次都是遍历4个点，所以只需要遍历n*n/4个格子即可。
+     * 2.根据公式其实也可以得到，当阶数为偶数时，我们需要枚举 n^2 / 4 = (n/2) * (n/2)次
+     * 3.当阶数为奇数时，由于中心的位置经过旋转后位置不变，我们需要枚举 (n^2-1) / 4 = ((n-1)/2) * ((n+1)/2)
      *
+     * 两种情况都取最大值，所以最终得到 i<n/2,j<(n+1)/2
      *
      * @param matrix
      */
     public static void rotateWithReplaceOneByOne(int[][] matrix) {
-
-
+        if (null == matrix || matrix.length == 0){
+            return;
+        }
+        int n = matrix.length;
+        for (int i=0;i<n/2;i++){
+            for (int j=0;j<(n+1)/2;j++){
+                int temp = matrix[i][j];
+                matrix[i][j] = matrix[n-j-1][i];
+                matrix[n-j-1][i] = matrix[n-i-1][n-j-1];
+                matrix[n-i-1][n-j-1] = matrix[j][n-i-1];
+                matrix[j][n-i-1] = temp;
+            }
+        }
     }
 
 

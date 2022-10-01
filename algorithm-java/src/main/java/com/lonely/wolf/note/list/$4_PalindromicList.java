@@ -19,14 +19,23 @@ public class $4_PalindromicList {
     public static void main(String[] args) {
         int[] arr1 = {1,2,3,2,1};
         int[] arr2 = {1,2,2,1};
-        System.out.println("数组判断法：" + isPalindromicByArr(ListNodeInit.initLinkedList(arr1)));
-        System.out.println("数组判断法：" + isPalindromicByArr(ListNodeInit.initLinkedList(arr2)));
+        System.out.println("【数组】判断法：" + isPalindromicByArr(ListNodeInit.initLinkedList(arr1)));
+        System.out.println("【数组】判断法：" + isPalindromicByArr(ListNodeInit.initLinkedList(arr2)));
 
-        System.out.println("全链表入栈判断法：" + isPalindromicByFullStack(ListNodeInit.initLinkedList(arr1)));
-        System.out.println("全链表入栈判断法：" + isPalindromicByFullStack(ListNodeInit.initLinkedList(arr2)));
+        System.out.println("【全链表入栈】判断法：" + isPalindromicByFullStack(ListNodeInit.initLinkedList(arr1)));
+        System.out.println("【全链表入栈】判断法：" + isPalindromicByFullStack(ListNodeInit.initLinkedList(arr2)));
 
-        System.out.println("半链表入栈判断法：" + isPalindromicByHalfStack(ListNodeInit.initLinkedList(arr1)));
-        System.out.println("半链表入栈判断法：" + isPalindromicByHalfStack(ListNodeInit.initLinkedList(arr2)));
+        System.out.println("【半链表入栈】判断法：" + isPalindromicByHalfStack(ListNodeInit.initLinkedList(arr1)));
+        System.out.println("【半链表入栈】判断法：" + isPalindromicByHalfStack(ListNodeInit.initLinkedList(arr2)));
+
+        System.out.println("【全链表反转】判断法：" + isPalindromicByReverseFullList(ListNodeInit.initLinkedList(arr1)));
+        System.out.println("【全链表反转】判断法：" + isPalindromicByReverseFullList(ListNodeInit.initLinkedList(arr2)));
+
+        System.out.println("【半链表反转】判断法：" + isPalindromicByReverseHalfList(ListNodeInit.initLinkedList(arr1)));
+        System.out.println("【半链表反转】判断法：" + isPalindromicByReverseHalfList(ListNodeInit.initLinkedList(arr2)));
+
+        System.out.println("【递归】判断法：" + isPalindromicByRecursion(ListNodeInit.initLinkedList(arr1)));
+        System.out.println("【递归】判断法：" + isPalindromicByRecursion(ListNodeInit.initLinkedList(arr2)));
     }
 
 
@@ -41,6 +50,9 @@ public class $4_PalindromicList {
     public static boolean isPalindromicByArr(ListNode head){
         if (null == head){
             return false;
+        }
+        if (null == head.next){
+            return true;
         }
         int len = ListNodeInit.getListLength(head);//获取链表长度
         ListNode[] arr = new ListNode[len];
@@ -78,9 +90,12 @@ public class $4_PalindromicList {
         if (null == head){
             return false;
         }
+        if (null == head.next){
+            return true;
+        }
         ListNode curr = head;
         Stack<ListNode> stack = new Stack<>();
-        int len = pushStackAndGetLength(stack,curr);
+        int len = pushStackAndGetLength(stack,curr);//入栈同时计算链表长度
         int half = len / 2;
 
         int count = 0;
@@ -106,6 +121,9 @@ public class $4_PalindromicList {
     public static boolean isPalindromicByHalfStack(ListNode head){
         if (null == head){
             return false;
+        }
+        if (null == head.next){
+            return true;
         }
         ListNode curr = head;
 
@@ -154,7 +172,37 @@ public class $4_PalindromicList {
         if (null == head){
             return false;
         }
-        //TODO
+        if (null == head.next){
+            return true;
+        }
+        ListNode curr1 = head;
+        ListNode newHead = new ListNode(head.val);//创建新链表
+        ListNode newHeadCurr = newHead;
+        while (curr1.next != null){
+            newHeadCurr.next = new ListNode(curr1.next.val);
+            newHeadCurr = newHeadCurr.next;
+            curr1 = curr1.next;
+        }
+        //反转新链表
+        ListNode pre = null;
+        ListNode curr2 = newHead;
+        while (null != curr2){
+            ListNode next = curr2.next;
+            curr2.next = pre;
+            pre = curr2;
+            curr2 = next;
+        }
+        newHead = pre;
+
+        ListNode _curr1 = head;
+        ListNode _curr2 = newHead;
+        while (null != _curr1){//可以优化只遍历一半
+            if (_curr1.val != _curr2.val){
+                return false;
+            }
+            _curr1 = _curr1.next;
+            _curr2 = _curr2.next;
+        }
         return true;
     }
 
@@ -179,20 +227,41 @@ public class $4_PalindromicList {
         if (null == head){
             return false;
         }
+        if (null == head.next){
+            return true;
+        }
 
-        //TODO
         int len = ListNodeInit.getListLength(head);
-        int half = len / 2 + len % 2;
+        int half = len / 2;
+        int remain = len % 2;
 
+        ListNode pre = null;
         ListNode curr = head;
-        int i = 1;
-
+        int count = 1;
+        while ((count++) <= half){
+            ListNode next = curr.next;
+            curr.next = pre;
+            pre = curr;
+            curr = next;
+        }
+        if (remain == 1 && null != curr){//奇数个节点时，跳过中间节点
+            curr = curr.next;
+        }
+        ListNode _curr1 = pre;
+        ListNode _curr2 = curr;
+        while (null != _curr1){
+            if (_curr1.val != _curr2.val){
+                return false;
+            }
+            _curr1 = _curr1.next;
+            _curr2 = _curr2.next;
+        }
         return true;
     }
 
 
     /**
-     * 方法5：反转链表法 + 快慢双指针法
+     * 方法6：反转链表法 + 快慢双指针法
      *
      * 依然是对方法4进行的优化，但是不需要获取长度，利用快慢双指针法
      *
@@ -210,10 +279,13 @@ public class $4_PalindromicList {
         if (null == head){
             return false;
         }
+        if (null == head.next){
+            return true;
+        }
 
         ListNode slow = head;
         ListNode fast = head;
-        ListNode start = head;
+        ListNode start = head;//反转后的新链表
 
         ListNode end = null;
         while (null != fast && fast.next != null){
@@ -240,6 +312,46 @@ public class $4_PalindromicList {
         return true;
     }
 
+
+    /**
+     * 递归法，参考下面的倒序打印链表思想
+     * @param head
+     * @return
+     */
+    private static ListNode TEMP;
+    public static boolean isPalindromicByRecursion(ListNode head){
+        if (null == head){
+            return false;
+        }
+        if (null == head.next){
+            return true;
+        }
+        TEMP = head;
+        return check(head);
+    }
+
+    private static boolean check(ListNode head){
+        if (null == head){
+            return true;
+        }
+        boolean res = check(head.next) && head.val == TEMP.val;
+        TEMP = TEMP.next;
+        return res;
+    }
+
+
+    /**
+     * 倒序打印链表
+     * @param head
+     */
+    private void printListNode(ListNode head){
+        if (null == head){
+            return;
+        }
+        printListNode(head.next);
+        System.out.println(head.val);
+    }
+
     private static int pushStackAndGetLength(Stack<ListNode> stack, ListNode head) {
         int length = 0;
         while (null != head){
@@ -249,4 +361,7 @@ public class $4_PalindromicList {
         }
         return length;
     }
+
+    /**----------------------------------------------------以下为复盘练习使用方法---------------------------------------------*/
+
 }

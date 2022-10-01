@@ -71,4 +71,25 @@ public class $5_MergeTwoList {
             return head2;
         }
     }
+
+    /**----------------------------------------------------以下为复盘练习使用方法---------------------------------------------*/
+
+    public static ListNode testMergeTwoListByRecursion(ListNode head1,ListNode head2){
+        if (null == head1){
+            return head2;
+        }
+        if (null == head2){
+            return head1;
+        }
+        int val1 = head1.val;
+        int val2 = head2.val;
+        ListNode newHead;
+        if (val1 < val2){
+            head1.next = testMergeTwoListByRecursion(head1.next,head2);
+            return head1;
+        }else{
+            head2.next = testMergeTwoListByRecursion(head1,head2.next);
+            return head2;
+        }
+    }
 }

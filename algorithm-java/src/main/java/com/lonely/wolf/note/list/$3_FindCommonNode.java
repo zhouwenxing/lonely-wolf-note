@@ -38,10 +38,13 @@ public class $3_FindCommonNode {
 
         ListNode listNode3 = findByMergeList(list1,list2);
         System.out.println("merge list寻找第一个公共节点：" + (null == listNode3 ? null : listNode3.getVal()));
+        ListNode listNode33 = findByMergeList(list1,list2);
+        System.out.println("merge list寻找第一个公共节点：" + (null == listNode33 ? null : listNode33.getVal()));
 
         ListNode listNode4 = findByMergeSubTwoPoint(list1,list2);
         System.out.println("sub point寻找第一个公共节点：" + (null == listNode4 ? null : listNode4.getVal()));
-
+        ListNode listNode44 = findByMergeSubTwoPoint(list1,list2);
+        System.out.println("sub point寻找第一个公共节点：" + (null == listNode44 ? null : listNode44.getVal()));
     }
 
 
@@ -145,7 +148,7 @@ public class $3_FindCommonNode {
     /**
      * 差和双指针
      *
-     * 假如公共⼦节点⼀定存在第⼀轮遍历，假设La⻓度为L1，Lb⻓度为L2.则｜L2-L1｜就是两个的差值。第⼆轮遍历，
+     * 假如公共⼦节点⼀定存在：第⼀轮遍历，假设La⻓度为L1，Lb⻓度为L2.则｜L2-L1｜就是两个的差值。第⼆轮遍历，
      * ⻓的先⾛｜L2-L1｜,然后两个链表同时向前⾛，结点⼀样的时候就是公共结点了
      *
      * 这道题的思路还是为了构建相同的链表去遍历，因为多出来的节点肯定不可能是相同节点，所以可以先遍历掉
@@ -195,5 +198,68 @@ public class $3_FindCommonNode {
             _curr2 = _curr2.next;
         }
         return _curr1;
+    }
+
+
+
+    /**----------------------------------------------------以下为复盘练习使用方法---------------------------------------------*/
+
+    /**
+     * 合并链表法
+     * @param head1
+     * @param head2
+     * @return
+     */
+    public static ListNode testFindByMergeList(ListNode head1,ListNode head2){
+        if (null == head1 || null == head2){
+            return null;
+        }
+        ListNode _head1 = head1;
+        ListNode _head2 = head2;
+        while (_head1 != _head2){
+            _head1 = _head1.next;
+            _head2 = _head2.next;
+            if (null == _head1){
+                _head1 = head2;
+            }
+            if (null == _head2){
+                _head2 = head1;
+            }
+        }
+        return _head1;
+    }
+    /**
+     * 差和法
+     * @param head1
+     * @param head2
+     * @return
+     */
+    public static ListNode testFindByMergeSubTwoPoint(ListNode head1,ListNode head2){
+        if (null == head1 || null == head2){
+            return null;
+        }
+        int len1 = ListNodeInit.getListLength(head1);
+        int len2 = ListNodeInit.getListLength(head2);
+
+        int sub = 0;
+        int count = 0;
+        if (len1 > len2){
+            sub = len1 - len2;
+            while ((count++) < sub){
+                head1 = head1.next;
+            }
+        }
+        if (len1 < len2){
+            sub = len2 - len1;
+            while ((count++) < sub){
+                head2 = head2.next;
+            }
+        }
+
+        while (head1 != head2){
+            head1 = head1.next;
+            head2 = head2.next;
+        }
+        return head1;
     }
 }

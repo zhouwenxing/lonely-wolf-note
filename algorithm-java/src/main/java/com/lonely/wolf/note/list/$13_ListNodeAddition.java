@@ -3,13 +3,11 @@ package com.lonely.wolf.note.list;
 import java.util.Stack;
 
 /**
- * 链表加法
- *
+ * 链表加法：
  * 假设链表中每⼀个节点的值都在 0 - 9 之间，那么链表整体就可以代表⼀个整数。给定两个这种链表，请⽣成代表两个整数相加值的结果链表。
  *
  * 解题思路
  * 和 $12_ListNodeAdditionOne- 单链表加1思路一致，通过栈或者反转列表来实现
- *
  * @author lonely_wolf
  * @version 1.0
  * @date 2021/12/25
@@ -22,22 +20,27 @@ public class $13_ListNodeAddition {
         int[] arr2 = {7,3,1,9,9};
         ListNode listNode1 = ListNodeInit.initLinkedList(arr1);
         ListNode listNode2 = ListNodeInit.initLinkedList(arr2);
-//        ListNode resultNode = additionOneByStack(listNode1,listNode2);
-//        ListNode resultNode = additionOneByStack2(listNode1,listNode2);
-        ListNode resultNode = additionOneByReverseList(listNode1,listNode2);
+//        ListNode resultNode = additionByStack(listNode1,listNode2);
+//        ListNode resultNode = additionByStack2(listNode1,listNode2);
+//        ListNode resultNode = additionByReverseList(listNode1,listNode2);
+//        System.out.println("相加后链表为：" + ListNodeInit.toString(resultNode));
 
-        System.out.println("相加后链表为：" + ListNodeInit.toString(resultNode));
+        ListNode resultNode2 = testAdditionByStack(listNode1,listNode2);
+        System.out.println("相加后链表为：" + ListNodeInit.toString(resultNode2));
 
     }
 
 
     /**
      * 通过栈实现
+     *
+     * 解题思路：首先将链表中的元素存到两个栈里面，然后出栈相加（要注意进位），将结果组成一个新的链表，最后将链表反转
+     *
      * @param head1
      * @param head2
      * @return
      */
-    public static ListNode additionOneByStack(ListNode head1,ListNode head2){
+    public static ListNode additionByStack(ListNode head1,ListNode head2){
         if (null == head1 || null == head2){
             return null == head1 ? head2 : head1;
         }
@@ -107,7 +110,7 @@ public class $13_ListNodeAddition {
      * @param head2
      * @return
      */
-    public static ListNode additionOneByStack2(ListNode head1,ListNode head2){
+    public static ListNode additionByStack2(ListNode head1,ListNode head2){
         if (null == head1 || null == head2){
             return null == head1 ? head2 : head1;
         }
@@ -164,7 +167,7 @@ public class $13_ListNodeAddition {
      * @param head2
      * @return
      */
-    public static ListNode additionOneByReverseList(ListNode head1,ListNode head2){
+    public static ListNode additionByReverseList(ListNode head1,ListNode head2){
         if (null == head1 || null == head2){
             return null == head1 ? head2 : head1;
         }
@@ -196,7 +199,75 @@ public class $13_ListNodeAddition {
             curr.next = node;
             node.next = next;
         }
-        return  sentry.next;
+        return sentry.next;
+    }
+
+    /**----------------------------------------------以下为复盘练习使用方法-----------------------------------------*/
+
+    public static ListNode testAdditionByStack(ListNode head1,ListNode head2){
+        if (null == head1){
+            return head2;
+        }
+        if (null == head2){
+            return head1;
+        }
+
+        //将链表存入栈内
+        Stack<ListNode> stack1 = new Stack<>();
+        Stack<ListNode> stack2 = new Stack<>();
+        ListNode curr1 = head1;
+        ListNode curr2 = head2;
+        while (null != curr1 && null != curr2){
+            stack1.push(curr1);
+            stack2.push(curr2);
+            curr1 = curr1.next;
+            curr2 = curr2.next;
+        }
+        while (null != curr1){
+            stack1.push(curr1);
+            curr1 = curr1.next;
+        }
+        while (null != curr2){
+            stack2.push(curr2);
+            curr2 = curr2.next;
+        }
+
+        //出栈相加
+        int carry = 0;//进位
+        ListNode sentry = new ListNode(-1);
+        ListNode curr = sentry;
+        while (!stack1.isEmpty() && !stack2.isEmpty()){
+            int num1 = stack1.pop().val;
+            int num2 = stack2.pop().val;
+            int sum = num1 + num2 + carry;
+            carry = sum / 10;
+            curr.next = new ListNode(sum % 10);
+            curr = curr.next;
+        }
+
+        while (!stack1.isEmpty()){
+            int num = stack1.pop().val;
+            int sum = num + carry;
+            carry = sum / 10;
+            curr.next = new ListNode(sum % 10);
+            curr = curr.next;
+        }
+
+        while (!stack2.isEmpty()){
+            int num = stack2.pop().val;
+            int sum = num + carry;
+            carry = sum / 10;
+            curr.next = new ListNode(sum % 10);
+            curr = curr.next;
+        }
+
+        if (carry == 1){
+            curr.next = new ListNode(1);
+        }
+
+        ListNode newHead = sentry.next;
+        sentry.next = null;
+        return $9_ReverseList.reverseByDirect(newHead);
     }
 
 }

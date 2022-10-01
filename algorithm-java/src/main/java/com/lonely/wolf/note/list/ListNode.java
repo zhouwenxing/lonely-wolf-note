@@ -14,6 +14,6 @@ public class ListNode {
     }
 
     public static void main(String[] args) {
-        ListNode listnode=new ListNode(1);
+        System.out.println(15 / 10);
     }
 }

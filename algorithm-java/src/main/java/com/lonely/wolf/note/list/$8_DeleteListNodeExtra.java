@@ -332,15 +332,85 @@ public class $8_DeleteListNodeExtra {
 
 
     /**
-     * 给定一个节点，删除他且假设给定的节点一定不是尾节点(力扣237)
+     * Leetcode 237
+     * 删除某个链表中给定的（非末尾）节点，传入函数的唯一值为被删除的节点
      *
      * 解题思想
-     * 这道题思路其实就是替换值，把下一个节点的值替换到删除节点，然后干掉下一个节点
+     * 这道题思路其实就是替换值，把下一个节点的值替换到删除节点，然后干掉下一个节点。
+     * 所以题目限定了非末尾，因为如果是末尾节点则无法实现替换，因为找不到前一个节点。
      *
      * @param deleteNode
      */
     public static void deleteNodeWithNotHead(ListNode deleteNode) {
-        deleteNode.val = deleteNode.next.val;
-        deleteNode.next = deleteNode.next.next;
+        if (null == deleteNode || null == deleteNode.next){
+            return;
+        }
+
+        deleteNode.val = deleteNode.next.val;//替换值
+        deleteNode.next = deleteNode.next.next;//连接到下下个节点
+    }
+
+
+    /**
+     * LeetCode 203
+     * 给定一个链表的头结点 head 和一个整数 val，请你删除链表中所有满足 Node.val == val 的节点，
+     * 并返回新的头结点。
+     *
+     * 解题思路：可以直接处理，但是需要区分头结点，引入一个哨兵节点后，可以不需要考虑是否头结点问题
+     *
+     * 示例：
+     * 输入：head=[1,2,6,3,4,5,6]，val=6，输出：[1,2,3,4,5]
+     *
+     * @param head
+     * @param val
+     */
+    public static ListNode removeTargetNode(ListNode head,int val) {
+        if (null == head){
+            return head;
+        }
+
+        ListNode sentry = new ListNode(-1);
+        sentry.next = head;
+
+        ListNode curr = sentry;
+        while (null != curr.next){
+            if (val != curr.next.val){
+                curr = curr.next;//继续遍历下一个节点
+            }else{//删除当前节点的next节点
+                curr.next = curr.next.next;
+            }
+        }
+        return sentry.next;
+    }
+
+
+    /**
+     * Leetcode 19：删除链表的倒数第 k 个节点，并返回链表的头结点
+     * @param head
+     * @param k
+     * @return
+     */
+    public static ListNode deleteKthNodeFromEnd(ListNode head,int k) {
+        if (null == head){
+            return head;
+        }
+
+        ListNode delNode = $18_FindKthNodeFromEnd.getKthFromEndByDoublePoint(head,k);
+        if (null == delNode){
+            return head;
+        }
+
+        ListNode sentry = new ListNode(-1);
+        sentry.next = head;
+
+        ListNode curr = sentry;
+        while (null != curr.next){
+            if (delNode == curr.next){
+                curr = curr.next;//继续遍历下一个节点
+            }else{//删除当前节点的next节点
+                curr.next = curr.next.next;
+            }
+        }
+        return sentry.next;
     }
 }

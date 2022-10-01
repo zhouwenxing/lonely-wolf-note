@@ -19,8 +19,15 @@ public class $10_ReverseListExtra1 {
         int[] arr = {1,2,3,4,5};
         ListNode listNode = ListNodeInit.initLinkedList(arr);
         System.out.println("初始链表：" + ListNodeInit.toString(listNode));
-        ListNode resultNode = reverseByDirect(listNode,4,3);
+        ListNode resultNode = reverseBetweenZone(listNode,2,5);
         System.out.println("反转链表：" + ListNodeInit.toString(resultNode));
+        ListNode listNode2 = ListNodeInit.initLinkedList(arr);
+        ListNode resultNode2 = testReverseBetweenZone(listNode2,2,5);
+        System.out.println("反转链表2：" + ListNodeInit.toString(resultNode2));
+
+        ListNode listNode3 = ListNodeInit.initLinkedList(arr);
+        ListNode resultNode3 = reverseBetweenZone2(listNode3,2,5);
+        System.out.println("反转链表3：" + ListNodeInit.toString(resultNode3));
     }
 
 
@@ -38,7 +45,7 @@ public class $10_ReverseListExtra1 {
      * @param right
      * @return
      */
-    public static ListNode reverseByDirect(ListNode head,int left,int right){
+    public static ListNode reverseBetweenZone(ListNode head,int left,int right){
         if (null == head || null == head.next || left > right){
             return head;
         }
@@ -49,7 +56,7 @@ public class $10_ReverseListExtra1 {
         int i = 1;
         ListNode curr = head;
         ListNode start = sentry;//记录开始反转链表的前一个节点
-        while (null != curr && i< left){
+        while (null != curr && i < left){
             start = curr;
             curr = curr.next;
             i++;
@@ -70,4 +77,79 @@ public class $10_ReverseListExtra1 {
         return sentry.next;
     }
 
+
+    /**
+     * 穿针引线法
+     * 本质上和头插法区别不大，无非是穿针引线法需要先切断反转区间的链表之后再进行反转，然后拼接三段链表
+     * @param head
+     * @param left
+     * @param right
+     * @return
+     */
+    public static ListNode reverseBetweenZone2(ListNode head,int left,int right){
+        if (null == head || null == head.next || left > right || left <=0){
+            return head;
+        }
+
+        ListNode sentry = new ListNode(-1);
+        sentry.next = head;
+        ListNode leftNode = head;
+        ListNode curr = head;
+        ListNode start = head;
+        int i=1;
+        while (null != curr && i<left){
+            leftNode = curr;
+            start = curr = curr.next;
+            i++;
+        }
+        ListNode end = curr;
+        ListNode rightNode = curr;
+        while (null !=curr && i<=right){
+            end = curr;
+            rightNode = curr = curr.next;
+            i++;
+        }
+
+        leftNode.next = null;
+        end.next = null;//切断需要反转的链表
+        $9_ReverseList.reverseByDirect(start);//反转链表
+
+        //拼接三段链表
+        leftNode.next = end;
+        start.next = rightNode;
+
+        return sentry.next;
+
+    }
+
+    /**----------------------------------------------以下为复盘练习使用方法-----------------------------------------*/
+
+    public static ListNode testReverseBetweenZone(ListNode head,int left,int right){
+        if (null == head || null == head.next || left > right){
+            return head;
+        }
+        int i = 1;
+        ListNode sentryNode = new ListNode(-1);
+        sentryNode.next = head;
+        ListNode curr = head;
+        ListNode start = sentryNode;
+        while (i < left && null != curr){
+            start = curr;
+            curr = curr.next;
+            i++;
+        }
+
+        ListNode pre = null;
+        ListNode next = null;
+        ListNode end = curr;
+        while (null != curr && (i++) <= right){
+            next = curr.next;
+            curr.next = pre;
+            pre = curr;
+            curr = next;
+        }
+        start.next = pre;
+        end.next = next;
+        return sentryNode.next;
+    }
 }
