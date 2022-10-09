@@ -1,5 +1,7 @@
 package com.lonely.wolf.note.list;
 
+import com.alibaba.fastjson.JSONObject;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Stack;
@@ -34,10 +36,10 @@ public class $8_DeleteListNodeExtra {
 //        ListNode result2 = removeSpecialKNodeFromEndByLength(listNode2,1);//遍历移除倒数第 k 个元素
 //        System.out.println(ListNodeInit.toString(result2));
 
-        int[] arr3 = {1};
-        ListNode listNode3 = ListNodeInit.initLinkedList(arr3);
-        ListNode result3 = removeSpecialKNodeFromEndByStack(listNode3,2);//通过栈移除倒数第 k 个元素
-        System.out.println(ListNodeInit.toString(result3));
+//        int[] arr3 = {1};
+//        ListNode listNode3 = ListNodeInit.initLinkedList(arr3);
+//        ListNode result3 = removeSpecialKNodeFromEndByStack(listNode3,2);//通过栈移除倒数第 k 个元素
+//        System.out.println(ListNodeInit.toString(result3));
 
 
 //        int[] arr4 = {1,2,3};
@@ -61,6 +63,14 @@ public class $8_DeleteListNodeExtra {
 //        ListNode listNode7 = ListNodeInit.initLinkedList(arr7);
 //        ListNode result7 = deleteRepeatElementFromUnordererList(listNode7);
 //        System.out.println(ListNodeInit.toString(result7));
+
+
+        int[] arr8 = {1,2,3,4,5,6,7,8,9,10,11,12,13};
+        ListNode head8 = ListNodeInit.initLinkedList(arr8);
+        int m = 2;
+        int n = 3;
+        ListNode resultNode = deleteNodes(head8,m,n);
+        System.out.println(ListNodeInit.toString(resultNode));
     }
 
 
@@ -229,7 +239,7 @@ public class $8_DeleteListNodeExtra {
 
 
     /**
-     * 删除重复节点
+     * Leetcode 83：删除有序链表重复节点，重复节点保留一个
      * 给定一个升序排列的链表的头节点 head ，请你删除所有重复的元素，使每个元素只出现⼀次 。返回同样按升序排列的结果链表。
      *
      * 解题思路
@@ -257,7 +267,7 @@ public class $8_DeleteListNodeExtra {
 
 
     /**
-     * 删除重复节点
+     * Leetcode 82：删除有序链表重复节点，重复节点一个不留
      * 给定一个升序排列的链表的头节点 head ，请你删除所有重复的元素（只要有重复的，一个都不保留），返回同样按升序排列的结果链表。
      *
      * 解题思路
@@ -291,7 +301,7 @@ public class $8_DeleteListNodeExtra {
 
 
     /**
-     * 删除重复节点
+     * Leetcode 1836：删除无序链表的重复节点，重复节点一个不留
      * 给定一个无序链表的头节点 head ，请你删除所有重复的元素（只要有重复的，一个都不保留），返回同样按升序排列的结果链表。
      *
      * 解题思路
@@ -395,7 +405,7 @@ public class $8_DeleteListNodeExtra {
             return head;
         }
 
-        ListNode delNode = $18_FindKthNodeFromEnd.getKthFromEndByDoublePoint(head,k);
+        ListNode delNode = $18_FindKthNodeFromEnd.getKthFromEndByDoublePoint(head,k);//三种寻找方式
         if (null == delNode){
             return head;
         }
@@ -405,12 +415,51 @@ public class $8_DeleteListNodeExtra {
 
         ListNode curr = sentry;
         while (null != curr.next){
-            if (delNode == curr.next){
+            if (delNode != curr.next){
                 curr = curr.next;//继续遍历下一个节点
             }else{//删除当前节点的next节点
                 curr.next = curr.next.next;
             }
         }
         return sentry.next;
+    }
+
+
+    /**
+     * LeetCode 1474:给定一个链表的 head 节点和两个整数 m 和 n，遍历该链表并按照如下方式删除节点：
+     * 1.开始时以头结点作为当前节点，
+     * 2.保留以当前节点开始的前 m 个节点，并删除接下来的 n 个节点
+     * 重复步骤2，直到到达链表结尾。
+     *
+     * 示例1：
+     * 输入：[1,2,3,4,5,6,7,8,9,10,11,12,13],m=2,n=3。
+     * 输出：[1,2,6,7,11,12]
+     * @param head
+     * @param m
+     * @param n
+     * @return
+     */
+    public static ListNode deleteNodes(ListNode head,int m,int n) {
+        if (null == head || m < 0 || n < 0){
+            return head;
+        }
+        ListNode curr = head;
+        ListNode tail = null;
+        int count;
+        while (null != curr){
+            count = m;
+            while (null != curr && (count--) > 0){
+                tail = curr;//记录结尾，后续需要跳过删除部分节点
+                curr = curr.next;
+            }
+            //此时的 tail 为保留节点的最后一个节点
+            count = n;
+            while (null != curr && (count--) > 0){
+                curr = curr.next;
+            }
+            tail.next = curr;//跳过删除的 n 区间
+        }
+//        tail.next = null;
+        return head;
     }
 }

@@ -12,16 +12,7 @@ import java.util.Stack;
  */
 public class StackClassicApplication {
     public static void main(String[] args) {
-//        String s1 = "()";
-//        String s2 = "()[]{}";
-//        String s3 = "(]";
-//        String s4 = "([)]";
-//        String s5 = "{[]}";
-//        System.out.println(isValid(s1));
-//        System.out.println(isValid(s2));
-//        System.out.println(isValid(s3));
-//        System.out.println(isValid(s4));
-//        System.out.println(isValid(s5));
+
 
         System.out.println("-----------------------------------------");
         String s11 = "3+2*2";
@@ -49,48 +40,6 @@ public class StackClassicApplication {
 
     }
 
-
-    /**
-     * leetcode 20
-     * 给定一个只包括 '('，')'，'{'，'}'，'['，']' 的字符串 s ，判断字符串是否有效。
-     *有效字符串需满足：
-     * (1)左括号必须用相同类型的右括号闭合。
-     * (2)左括号必须以正确的顺序闭合。
-     *
-     * 示例：
-     * 输入：s = "()"  输出：true
-     * 输入：s = "()[]{}" 输出：true
-     * 输入：s = "(]" 输出：false
-     * 输入：s = "([)]" 输出：false
-     * 输入：s = "{[]}" 输出：true
-     *
-     * @param s
-     * @return
-     */
-   public static boolean isValid(String s){
-       if (null == s || s.length() == 0){
-           return false;
-       }
-
-       Stack<Character> stack = new Stack<>();
-       //配对括号放入 map 可以省去后面的大量 if
-       Map<Character,Character> map = new HashMap<>();
-       map.put(')','(');
-       map.put(']','[');
-       map.put('}','{');
-       for (int i=0;i<s.length();i++){
-           char c = s.charAt(i);
-           if (c == '(' || c == '[' || c == '{'){
-               stack.push(c);//左括号入栈
-           }else{
-               if (stack.isEmpty() || map.get(c) != stack.peek()){
-                   return false;
-               }
-               stack.pop();//配对成功则出栈
-           }
-       }
-       return stack.isEmpty();
-   }
 
 
     /**

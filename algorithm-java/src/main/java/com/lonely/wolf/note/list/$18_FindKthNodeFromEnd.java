@@ -12,11 +12,12 @@ import java.util.Stack;
 public class $18_FindKthNodeFromEnd {
 
     public static void main(String[] args) {
-        int[] arr = {1,2,3,4,5,6,7,8,9};
+        int[] arr = {1,2};
+        int k = 1;
         ListNode head = ListNodeInit.initLinkedList(arr);
-        System.out.println(getKthFromEndByTwoIteration(head,3).val);
-        System.out.println(getKthFromEndByStack(head,3).val);
-        System.out.println(getKthFromEndByDoublePoint(head,3).val);
+        System.out.println(getKthFromEndByTwoIteration(head,k).val);
+        System.out.println(getKthFromEndByStack(head,k).val);
+        System.out.println(getKthFromEndByDoublePoint(head,k).val);
     }
 
 
@@ -27,7 +28,7 @@ public class $18_FindKthNodeFromEnd {
      * @return
      */
     public static ListNode getKthFromEndByTwoIteration(ListNode head,int k){
-        if (null == head || k <= 1){
+        if (null == head || k < 1){
             return head;
         }
         int len = ListNodeInit.getListLength(head);
@@ -44,9 +45,8 @@ public class $18_FindKthNodeFromEnd {
     }
 
 
-
     public static ListNode getKthFromEndByStack(ListNode head,int k){
-        if (null == head || k <= 1){
+        if (null == head || k < 1){
             return head;
         }
         Stack<ListNode> stack = new Stack<>();
@@ -68,7 +68,7 @@ public class $18_FindKthNodeFromEnd {
 
 
     public static ListNode getKthFromEndByDoublePoint(ListNode head,int k){
-        if (null == head || k <= 1){
+        if (null == head || k < 1){
             return head;
         }
         ListNode first = head;
