@@ -1,5 +1,8 @@
 package com.lonely.wolf.note.tree;
 
+import java.util.LinkedList;
+import java.util.Stack;
+
 /**
  * 深度优先
  *
@@ -12,6 +15,14 @@ package com.lonely.wolf.note.tree;
  */
 public class $6_TraverseTreeByDFS3 {
     public static void main(String[] args) {
+        TreeNode treeNode = new TreeNode(4);
+        treeNode.left = new TreeNode(2);
+        treeNode.right = new TreeNode(7);
+        treeNode.left.left = new TreeNode(1);
+        treeNode.left.right = new TreeNode(3);
+        treeNode.right.left = new TreeNode(6);
+        treeNode.right.right = new TreeNode(9);
+
 
     }
 
@@ -88,7 +99,8 @@ public class $6_TraverseTreeByDFS3 {
 
     /**
      * 对称⼆叉树
-     * LeetCode101 给定⼀个⼆叉树，检查它是否是镜像对称的。例如下⾯这个就是对称⼆叉树
+     * LeetCode 101 给定⼀个⼆叉树，检查它是否是镜像对称的。例如下⾯这个就是对称⼆叉树
+     * 解题思路：递归法
      *       1
      *     /  \
      *    2    2
@@ -151,6 +163,146 @@ public class $6_TraverseTreeByDFS3 {
 //        invertTree(root.left);
 //        invertTree(root.right);
 
+        return root;
+    }
+
+
+    /**----------------------------------------------以下为复盘练习使用方法-----------------------------------------*/
+
+    /**
+     * 利用迭代法判断是否对称二叉树
+     * @param root
+     * @return
+     */
+    public static boolean testIsSymmetricByTraversal(TreeNode root){
+        if (null == root){
+            return true;
+        }
+        if (null == root.left && null == root.right){
+            return true;
+        }
+        LinkedList<TreeNode> queue = new LinkedList<>();
+        queue.add(root);
+        int size = 1;
+        LinkedList<TreeNode> tempQueue = new LinkedList<>();
+        while (!queue.isEmpty()){
+            TreeNode node = queue.removeLast();
+            if (null != node){
+                TreeNode left = node.left;
+                TreeNode right = node.right;
+                queue.addFirst(left);
+                queue.addFirst(right);
+            }
+            tempQueue.addFirst(node);
+            size--;
+            if (size == 0){
+                size = queue.size();
+                boolean result = check(tempQueue,root);
+                if (!result){
+                    return false;
+                }
+                tempQueue.clear();
+            }
+        }
+        return true;
+    }
+
+
+    /**
+     * 采用迭代法
+     * @param root
+     * @return
+     */
+    public static TreeNode testInvertTreeByTraversal(TreeNode root){
+        if (null == root){
+            return root;
+        }
+        LinkedList<TreeNode> queue = new LinkedList<>();
+        int size = 1;
+        queue.add(root);
+        while (!queue.isEmpty()){
+            TreeNode node = queue.removeLast();
+
+            swap(node);//交换左右节点
+
+            if (null != node.left){
+                queue.add(node.left);
+            }
+            if (null != node.right){
+                queue.add(node.right);
+            }
+            size--;
+            if (size == 0){
+                size = queue.size();
+            }
+        }
+        return root;
+    }
+
+
+    public static boolean testIsSameTree(TreeNode p, TreeNode q){
+        if (null == p && null == q){
+            return true;
+        }
+        if (null == p || null == q){
+            return false;
+        }
+        if (p.val != q.val){
+            return false;
+        }
+        return testIsSameTree(p.left,q.left) && testIsSameTree(p.right,q.right);
+    }
+
+    private static void swap(TreeNode node) {
+        TreeNode temp = node.left;
+        node.left = node.right;
+        node.right = temp;
+    }
+
+    private static boolean check(LinkedList<TreeNode> queue,TreeNode root) {
+        if (queue.isEmpty()){
+            return true;
+        }
+        if (queue.size() == 1){
+            if (queue.getFirst() == root){
+                return true;
+            }else{
+                return false;
+            }
+        }
+        TreeNode left = queue.removeFirst();
+        TreeNode right = queue.removeLast();
+        if (null == left && null == right){
+            return check(queue,root);
+        }
+        if (null == left || null == right){
+            return false;
+        }
+        if (left.val != right.val){
+            return false;
+        }
+       return check(queue,root);
+    }
+
+    /**
+     * 合并 2 颗二叉树
+     * @param root1
+     * @param root2
+     * @return
+     */
+    public static TreeNode testMergeTwoTree(TreeNode root1,TreeNode root2){
+        if(null == root1 && null == root2){
+            return null;
+        }
+        if (null == root1){
+            return root2;
+        }
+        if (null == root2){
+            return root1;
+        }
+        TreeNode root = new TreeNode(root1.val + root2.val);
+        root.left = testMergeTwoTree(root1.left,root2.left);
+        root.right = testMergeTwoTree(root1.right,root2.right);
         return root;
     }
 }

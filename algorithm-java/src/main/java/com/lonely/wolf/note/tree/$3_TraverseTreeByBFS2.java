@@ -149,4 +149,34 @@ public class $3_TraverseTreeByBFS2 {
         }
         return rightSideValues;
     }
+
+
+    /**----------------------------------------------以下为复盘练习使用方法-----------------------------------------*/
+    public static List<Integer> testLargestValuesForEveryLevel(TreeNode root){
+        List<Integer> data = new ArrayList<>();
+        if (null == root){
+            return data;
+        }
+        LinkedList<TreeNode> queue = new LinkedList<>();
+        queue.add(root);
+        int size = queue.size();
+        int levelMaxNum = Integer.MIN_VALUE;
+        while (!queue.isEmpty()){
+            TreeNode node = queue.removeFirst();
+            levelMaxNum = Math.max(levelMaxNum,node.val);
+            if (null != node.left){
+                queue.add(node.left);
+            }
+            if (null != node.right){
+                queue.add(node.right);
+            }
+            size--;
+            if (size == 0){
+                data.add(levelMaxNum);
+                levelMaxNum = Integer.MIN_VALUE;
+                size = queue.size();
+            }
+        }
+        return data;
+    }
 }

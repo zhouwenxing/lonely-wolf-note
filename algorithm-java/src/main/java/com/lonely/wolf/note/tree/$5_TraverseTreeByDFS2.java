@@ -1,5 +1,10 @@
 package com.lonely.wolf.note.tree;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.List;
+
 /**
  * 深度优先
  *
@@ -29,14 +34,70 @@ public class $5_TraverseTreeByDFS2 {
      * @param root
      * @return
      */
-    public static int maxDepth(TreeNode root){
+    public static int maxDepthByRecursion(TreeNode root){
         if (null == root){
             return 0;
         }
-        int leftLength = maxDepth(root.left);
-        int rightLength = maxDepth(root.right);
+        int leftLength = maxDepthByRecursion(root.left);
+        int rightLength = maxDepthByRecursion(root.right);
 
         return Math.max(leftLength,rightLength) + 1;
+    }
+
+    /**
+     * 利用迭代法，也就是广度优先遍历，通过变量记录层级
+     * @param root
+     * @return
+     */
+    public static int maxDepthByIteration(TreeNode root){
+        if (null == root){
+            return 0;
+        }
+        LinkedList<TreeNode> queue = new LinkedList();
+        queue.add(root);
+
+        int depth = 0;
+        int size = 1;
+        while (!queue.isEmpty()){
+            TreeNode curr = queue.removeLast();
+            TreeNode left = curr.left;
+            TreeNode right = curr.right;
+            if (null != left){
+                queue.addFirst(left);
+            }
+            if (null != right){
+                queue.addFirst(right);
+            }
+            size--;
+            if (size == 0){
+                depth++;
+                size = queue.size();
+            }
+        }
+        return depth;
+    }
+
+
+    /**
+     * LeetCode559 N叉树的最⼤深度
+     *
+     *
+     * @param root
+     * @return
+     */
+    public static int maxDepthForNTree(NTreeNode root){
+        if (null == root){
+            return 0;
+        }
+        if (root.children.isEmpty()){
+            return 1;
+        }
+
+        List<Integer> data = new ArrayList<>();
+        for (NTreeNode node : root.children){
+            data.add(maxDepthForNTree(node));
+        }
+        return Collections.max(data) + 1;
     }
 
 
@@ -45,7 +106,6 @@ public class $5_TraverseTreeByDFS2 {
      *
      * 给定⼀个⼆叉树，判断它是否是⾼度平衡的⼆叉树。
      * 本题中，⼀棵⾼度平衡⼆叉树定义为：⼀个⼆叉树每个节点 的左右两个⼦树的⾼度差的绝对值不超过 1
-     *
      *
      * @param root
      * @return
@@ -136,4 +196,48 @@ public class $5_TraverseTreeByDFS2 {
         }
         return minDepth + 1;
     }
+
+
+    /**----------------------------------------------以下为复盘练习使用方法-----------------------------------------*/
+
+    public static int testMaxDepthByRecursion(TreeNode root){
+        if (null == root){
+            return 0;
+        }
+        int leftLength = testMaxDepthByRecursion(root.left);
+        int rightLength = testMaxDepthByRecursion(root.right);
+
+        return Math.max(leftLength,rightLength) + 1;
+    }
+
+
+
+
+    public static boolean testIsBalanced(TreeNode root){
+        if (null == root){
+            return true;
+        }
+        int len = countDepth(root);
+        return len != -1;
+    }
+
+    private static int countDepth(TreeNode node) {
+        if (null == node){
+            return 0;
+        }
+        int left = countDepth(node.left);
+        if (left == -1){
+            return -1;
+        }
+        int right = countDepth(node.right);
+        if (right == -1){
+            return -1;
+        }
+        if (Math.abs(left - right) > 1){
+            return -1;
+        }
+        return Math.max(left,right) + 1;
+    }
+
+
 }

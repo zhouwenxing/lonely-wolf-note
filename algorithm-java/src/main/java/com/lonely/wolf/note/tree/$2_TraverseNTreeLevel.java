@@ -20,14 +20,19 @@ public class $2_TraverseNTreeLevel {
     }
 
 
-    public static String traverseTreeLevel(NTreeNode rootNode){
-        if (null == rootNode){
+    /**
+     * LeetCode 429 N叉树的层次遍历
+     * @param root
+     * @return
+     */
+    public static String traverseTreeLevel(NTreeNode root){
+        if (null == root){
             return Collections.EMPTY_LIST.toString();
         }
         List<List<Integer>> data = new ArrayList<>();
         List<Integer> levelData = new ArrayList<>();
         LinkedList<NTreeNode> queue = new LinkedList<>();
-        queue.add(rootNode);
+        queue.add(root);
         int size = queue.size();
         while (!queue.isEmpty()){
             if (size == 0){
@@ -52,6 +57,33 @@ public class $2_TraverseNTreeLevel {
         return data.toString();
     }
 
+    /**----------------------------------------------以下为复盘练习使用方法-----------------------------------------*/
 
-
+    public static List<List<Integer>> testTraverseTreeLevel(NTreeNode root){
+        List<List<Integer>> data = new ArrayList<>();
+        if (null == root){
+            return data;
+        }
+        LinkedList<NTreeNode> queue = new LinkedList<>();
+        queue.add(root);
+        int size = queue.size();
+        List<Integer> levelData = new ArrayList<>();
+        while (!queue.isEmpty()){
+            NTreeNode node = queue.removeFirst();
+            levelData.add(node.val);
+            List<NTreeNode> childNodes = node.children;
+            if (!childNodes.isEmpty()){
+                for (NTreeNode childNode : childNodes){
+                    queue.addLast(childNode);
+                }
+            }
+            size--;
+            if (size == 0){
+                data.add(levelData);
+                levelData = new ArrayList<>();
+                size = queue.size();
+            }
+        }
+        return data;
+    }
 }
