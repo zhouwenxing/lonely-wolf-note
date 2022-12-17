@@ -90,7 +90,7 @@ public class $4_TraverseTreeByDFS {
         Stack<TreeNode> stack = new Stack<>();
         TreeNode node = root;
         while (!stack.isEmpty() || null != node){
-            while (null != node){
+            while (null != node){//根节点先入栈，然后不断将左节点入栈，最后出栈就是最底层的左节点
                 stack.push(node);
                 node = node.left;
             }
